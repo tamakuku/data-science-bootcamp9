@@ -1,16 +1,23 @@
+
 # Data Science Bootcamp Batch 9
 
-I'm learning to data working man.
+I'm learning to be a data working man.
 
-## Issue learning of Bootcamp
+## Topics learning of Bootcamp
 ### First half
-- xxx
-- xxx
-- xxx
+- Introduction into Data Sciences
+- Second Brain, PARA Medthod by Notion
+- Spreadsheets
+- SQL
+- R Coding
+- Data Transformation
+- Data Visualization
 
 ### Second half
-- xxx
-- xxx
-- xxx
+- Statistics 101
+- Build Portfolio
+- Data Dashboard
+- Machine Learning
+- Python
 
 Contact: spanthu@gmail.com
