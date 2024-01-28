@@ -1,6 +1,7 @@
 
 # Data Science Bootcamp Batch 9
-
+Yolo~
+My name is Suphakit Panthu (Top).
 I'm learning to be a data working man.
 
 ## Topics learning of Bootcamp
