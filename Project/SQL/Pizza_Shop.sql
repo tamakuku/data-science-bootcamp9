@@ -1,3 +1,4 @@
+-- Create Table Pizza Shops โดยมีข้อมูล 4 Column ได้แก่ shops, customers, menu, orders
 CREATE TABLE shops
 ( shop_id INT,
   shop_location TEXT);
@@ -77,6 +78,8 @@ SELECT * FROM menu;
 
 SELECT * FROM orders;
 
+
+-- จากนั้นลองดึงข้อมูล ตามเงื่อนไขที่กำหนดดังนี้
 -- Query 1 Join 3 Table โดยใช้ JOIN ON และ SUM เพื่อดูรายชื่อลูกค้า ที่มียอดสั่งซื้อ pizza รวมมากกว่า 500
 SELECT 
   customer_name,
@@ -87,6 +90,7 @@ JOIN menu AS Me ON Ord.menu_id = Me.menu_id
 GROUP BY customer_name
 HAVING total_spend > 500
 ORDER BY total_spend DESC;
+
 
 -- Query 2 Join 3 Table ด้วย WHERE แล้วใช้ COUNT เพื่อดูว่า Shop ที่มีจำนวน Order มากที่สุด โดยเรียงจาก มากสุด ไป น้อยสุด 3 อันดับแรก
 SELECT
@@ -100,6 +104,7 @@ WHERE T1.shop_id = T2.shop_id AND T2.menu_id = T3.menu_id
 GROUP by 1
 ORDER BY 2 DESC
 LIMIT 3;
+
 
 -- Query 3 Join 3 Table ด้วย JOIN ON แล้วใช้ Subqueries แบบ Standard เพื่อดึง firstname ลูกค้า ที่สั่งซื้อเฉพาะ Menu Beef_pizza และ country อยู่ใน Japan
 SELECT
@@ -131,6 +136,7 @@ JOIN Menu_Pork AS T2 ON T1.menu_id = T2.menu_id
 JOIN Shop_C AS T3 ON T1.shop_id = T3.shop_id
 GROUP BY 1
 ORDER BY Total_Sale DESC;
+
 
 -- query 5 Join 4 Table ด้วย WHERE Clause และ ใช้ WITH ทำเงื่อนไขทั้งหมดให้เป็น Subqueries เพื่อหายอดขายทุกร้าน ยกเว้นสาขา Bangkok เลือกเฉพาะลูกค้า Thailand กับ japan และที่มียอดสั่งซื้อเฉลี่ย ไม่เกิน 500 โดยเรียงจากยอดขาย มากสุดไปน้อยสุด
 WITH
