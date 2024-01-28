@@ -1,7 +1,0 @@
----
-title: "Home Work Data Viz Live"
-author: "tamakuku"
-date: "2024-01-08"
-output: html_document
----
-
