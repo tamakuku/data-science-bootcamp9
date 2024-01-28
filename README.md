@@ -6,7 +6,7 @@ My name is Suphakit Panthu (Top).
 
 I'm learning to be a data working man.
 
-you guy can see my portfolio in project folder.
+you guy can see my portfolio in Project folder.
 
 ## Topics learning of Bootcamp
 ### First half
