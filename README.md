@@ -1,8 +1,12 @@
 
 # Data Science Bootcamp Batch 9
 Yolo~
+
 My name is Suphakit Panthu (Top).
+
 I'm learning to be a data working man.
+
+you guy can see my portfolio in project folder.
 
 ## Topics learning of Bootcamp
 ### First half
@@ -22,3 +26,5 @@ I'm learning to be a data working man.
 - Python
 
 Contact: spanthu@gmail.com
+
+Thanks for your interest.
