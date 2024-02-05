@@ -1,0 +1,100 @@
+
+install.packages( "tidyverse")
+install.packages( "caret" )
+
+library( tidyverse )
+library( caret ) ## use for Supervised Learning Model
+
+##### Home Work ML live day 01 ------
+
+#### use churn.csv to build model with glm method
+### with 4 Step basic ML workflow
+
+
+## read churn.csv file >>> return into dataframe first
+churn_df <- read.csv( "churn.csv" )
+## view dataframe
+churn_df
+
+
+### 01 Step Split data >>> Train 80% & Test 20%
+## build split data template
+
+set.seed( 42 ) ## lock random sampling
+
+n <- nrow( churn_df ) ## count sample size
+
+train_id <- sample( 1:n, size = 0.8 * n ) ## random sampling
+
+train_df <- churn_df[ train_id, ] ## train data
+test_df <- churn_df[ -train_id, ] ## test data
+
+return( list( train_df, test_df ) ) ## return 2 split data into list
+
+## return split data template into value function()
+train_test_split <- function( data ) {
+  set.seed( 42 )
+  n <- nrow( data )
+  train_id <- sample( 1:n, size = 0.8 * n )
+  train_df <- data[ train_id, ]
+  test_df <- data[ -train_id, ]
+  return( list( train_df, test_df ) )
+}
+
+## then try to use split data function
+train_test_split( churn_df )
+## and return split data into dataframe
+preb_split_df <- train_test_split( churn_df )
+
+## preview split data train & test by subset[[]]
+preb_split_df[[1]] ## this is train data
+preb_split_df[[2]] ## this is test data
+
+
+### 02 Step train model
+## by use train() function
+## with 4 features(x)
+## and use K-fold Re-sampling K=10
+
+## build K-fold control value
+ctrl_kfold <- trainControl( method = "CV", number = 10 )
+
+## build train model
+train_model <- train( churn ~ totaldayminutes + totaldaycalls + totaldaycharge + numbercustomerservicecalls,
+                      data = churn_df,
+                      method = "glm",
+                      trControl = ctrl_kfold )
+## try train model
+train_model
+
+
+### 03 Step Score model
+## or take Train model use predict Test data
+## with predict() function
+predict_test <- predict( train_model, newdata = preb_split_df[[2]] )
+
+## try predict Test data
+predict_test
+
+
+### 04 Step Evaluate model
+## or find error metric ( MAE, RMSE ) or Accuracy from Test data
+
+## if use method = “lm” >>> use error ( MAE, RMSE )
+## if use method = “glm” >>> use Accuracy
+
+## for compare Train vs Test model
+
+## create actual test data
+actual_test <- preb_split_df[[2]]$churn
+## preview actual test data
+actual_test
+
+## find accuracy = mean( predict Test data == actual Test data )
+acc_test_model <- mean( actual_test == predict_test )
+
+### end with compare accuracy Train vs Test Model
+train_model
+
+print( acc_test_model )
+
