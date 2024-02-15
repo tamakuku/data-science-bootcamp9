@@ -1,9 +1,12 @@
 
+### use Logistic Regression Model
+
 install.packages( "tidyverse")
 install.packages( "caret" )
 
 library( tidyverse )
 library( caret ) ## use for Supervised Learning Model
+
 
 #### use churn.csv to build model with glm method
 ### with 4 Step basic ML workflow
@@ -92,6 +95,7 @@ actual_test
 acc_test_model <- mean( actual_test == predict_test )
 
 ### end with compare accuracy Train vs Test Model
+
 train_model
 
 print( acc_test_model )
