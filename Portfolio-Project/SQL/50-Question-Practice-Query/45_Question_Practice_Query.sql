@@ -1,4 +1,3 @@
-
 -- Q1 select ProductName, UnitPrice and UnitsInStock column from Products table.
 SELECT ProductName, UnitPrice, UnitsInStock
 FROM Products;
@@ -241,16 +240,7 @@ FROM Customers AS CU, Orders AS ORD
 WHERE CU.CustomerId = ORD.CustomerId
 GROUP BY Country;
 
-
-
---- *** question 27 - 31 is not clearly ***
---- what is customers you mean and from what table?
---- I saw customers just have relaionship between Customers and Orders table.
-
-
-
-
--- Q32 Show data in Employees TABLE
+-- Q27 Show data in Employees TABLE
 SELECT TitleOfCourtesy,
 		FirstName,
 		LastName,
@@ -258,21 +248,21 @@ SELECT TitleOfCourtesy,
 FROM Employees;
 
 
--- Q33 insert new column is Employee that combine TitleOfCourtesy + FirstName + LastName
+-- Q28 insert new column is Employee that combine TitleOfCourtesy + FirstName + LastName
 -- and change text to upper
 SELECT upper( TitleOfCourtesy || ' ' || FirstName || ' ' || LastName ) AS Employee,
 		BirthDate
 FROM Employees;
 
 
--- Q34 Show Employee with younger to older
+-- Q29 Show Employee with younger to older
 SELECT upper( TitleOfCourtesy || ' ' || FirstName || ' ' || LastName ) AS Employee,
 		BirthDate
 FROM Employees
 ORDER BY BirthDate DESC;
 
 
--- Q35 Show Employee only MR.
+-- Q30 Show Employee only MR.
 SELECT upper( TitleOfCourtesy || ' ' || FirstName || ' ' || LastName ) AS Employee,
 		BirthDate
 FROM Employees
@@ -280,28 +270,28 @@ WHERE TitleOfCourtesy = 'Mr.'
 ORDER BY BirthDate DESC;
 
 
--- Q36 Show Employee BirthDate is 1995
+-- Q31 Show Employee BirthDate is 1995
 SELECT upper( TitleOfCourtesy || FirstName || ' ' || LastName ) AS Employee,
 		BirthDate
 FROM Employees
 WHERE BirthDate like '1995%';
 
 
--- Q37 Show Employee BirthDate is Jan
+-- Q32 Show Employee BirthDate is Jan
 SELECT upper( TitleOfCourtesy || ' ' || FirstName || ' ' || LastName ) AS Employee,
 		BirthDate
 FROM Employees
 WHERE BirthDate like '%-01-%';
 
 
--- Q38 JOIN 2 TABLE Products and Suppliers then show ProductName and CompanyName ( AS SupplierName )
+-- Q33 JOIN 2 TABLE Products and Suppliers then show ProductName and CompanyName ( AS SupplierName )
 SELECT ProductName,
 		CompanyName AS SupplierName
 FROM Products AS PR, Suppliers AS SU
 WHERE PR.SupplierId = SU.SupplierId;
 
 
--- Q39 JOIN 3 TABLE Products, Categories and Suppliers
+-- Q34 JOIN 3 TABLE Products, Categories and Suppliers
 -- then show ProductName, CategoryName ( AS Category ) and CompanyName ( AS SupplierName )
 SELECT ProductName,
 		CategoryName AS Category,
@@ -311,7 +301,7 @@ WHERE PR.CategoryId = CA.CategoryId
 AND PR.SupplierId = SU.SupplierId;
 
 
--- Q40 JOIN 4 TABLE Orders, Customers, Employees and Shippers
+-- Q35 JOIN 4 TABLE Orders, Customers, Employees and Shippers
 -- then show OrderId, OrderDate from Orders table
 -- CompanyName ( AS Customer ) from Customers table
 -- Full Name from Employees table
@@ -331,7 +321,7 @@ AND ORD.EmployeeId = EM.EmployeeId
 GROUP BY OrderId;
 
 
--- Q41 Show basic Aggregate Function for ProductName and UnitPrice in Products TABLE
+-- Q36 Show basic Aggregate Function for ProductName and UnitPrice in Products TABLE
 SELECT count( ProductName ) AS NoOfProduct,
 		sum( UnitPrice ) AS SumOfUnitPrice,
 		max( UnitPrice ) AS MaxOfUnitPrice,
@@ -340,7 +330,7 @@ SELECT count( ProductName ) AS NoOfProduct,
 FROM Products;
 
 
--- Q42 join 2 table Categories and Products
+-- Q37 join 2 table Categories and Products
 -- Count product each Categories and sort max to min
 SELECT CategoryName,
 	count( ProductName ) AS NoOfProduct
@@ -350,7 +340,7 @@ GROUP BY CategoryName
 ORDER BY count( ProductName ) DESC;
 
 
--- Q43 from Q42 filter CategoryName have count product below 10
+-- Q38 from Q42 filter CategoryName have count product below 10
 SELECT CategoryName,
 	count( ProductName ) AS NoOfProduct
 FROM Categories AS CA, Products AS PR
@@ -361,7 +351,7 @@ ORDER BY count( ProductName )
 DESC;
 
 
--- Q44 join 2 table Customers and Orders
+-- Q39 join 2 table Customers and Orders
 -- Show CompanyName in Customers AS Customer
 -- that have most count order top 10 and sort max to min
 SELECT CompanyName AS Customer,
@@ -373,7 +363,7 @@ ORDER BY count( OrderID ) DESC
 LIMIT 10;
 
 
--- Q45 join 2 table Customers and Orders
+-- Q40 join 2 table Customers and Orders
 -- show Country, CompanyName AS Customer and count ORDER
 -- sort by Country A-Z
 SELECT Country,
@@ -385,7 +375,7 @@ GROUP BY CompanyName
 ORDER BY Country;
 
 
--- Q46 from Q46 show Customer dont have any order
+-- Q41 from Q46 show Customer dont have any order
 SELECT CompanyName AS Customer,
 		OrderId
 FROM Customers AS CU
@@ -395,7 +385,7 @@ WHERE OrderId is NULL
 GROUP BY CompanyName;
 
 
--- Q47 join 2 table Shippers and Orders
+-- Q42 join 2 table Shippers and Orders
 -- show CompanyName ( AS Shipper ) from Shippers TABLE
 -- and sum Freight from orders TABLE
 SELECT CompanyName AS Shipper,
@@ -405,7 +395,7 @@ WHERE SH.ShipperID = ORD.ShipVia
 GROUP BY CompanyName;
 
 
--- Q48 insert new data into column CategoryId, CategoryName and Description in Categories table
+-- Q43 insert new data into column CategoryId, CategoryName and Description in Categories table
 -- ( 9, 'catename1', NULL )
 -- ( 10, 'catename2', des2 )
 INSERT INTO Categories ( CategoryId, CategoryName, Description )
@@ -417,7 +407,7 @@ VALUES
 SELECT * FROM Categories;
 
 
--- Q49 chage data in Description column in CategoryId = 10
+-- Q44 chage data in Description column in CategoryId = 10
 -- from 'desc2' to 'update des3'
 UPDATE Categories
 SET Description = 'update desc3'
@@ -427,7 +417,7 @@ WHERE CategoryId = 10;
 SELECT * FROM Categories;
 
 
--- Q50 DELETE all data row 9-10 from Q49
+-- Q45 DELETE all data row 9-10 from Q49
 DELETE FROM Categories
 WHERE CategoryId IN ( 9, 10 );
 
