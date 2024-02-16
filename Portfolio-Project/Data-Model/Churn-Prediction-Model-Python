@@ -10,14 +10,19 @@ Link >>> https://colab.research.google.com/drive/1K4eVfD0NLN0B33awu1BsOB3eDYwlxe
 ## import module
 from sklearn.linear_model import LogisticRegression # model
 from sklearn.model_selection import train_test_split # split data
+
+from google.colab import drive # read file from google drive
+
+## Connect to Google Drive
+drive.mount('/content/drive')
+
 import pandas as pd # manage dataframe
 
-
-## read csv file
-churn = pd.read_csv("churn.csv")
+## Read CSV file from google drive
+df = pd.read_csv("/content/drive/MyDrive/Bootcamp 9/Raw Data/churn.csv")
 
 ## preview dataframe
-churn.head()
+df.head()
 
 
 ## select X, y variables
