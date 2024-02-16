@@ -4,7 +4,7 @@ install.packages("patchwork")
 install.packages("tidyverse")
 
 library(ggplot2)
-library(patchwork)
+library(patchwork) # for print multiple chart in once preview
 library(tidyverse)
 library(readr)
 
