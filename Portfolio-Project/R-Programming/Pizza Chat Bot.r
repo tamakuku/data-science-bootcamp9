@@ -1,4 +1,9 @@
 
+## build chat bot function, for buy pizza
+## ask Input user name, print menu name & price
+## each choose menu will + bills value
+## print summary bills when Finish choose menu
+
 pizza <- function() {
   
   ## bills value
