@@ -1,5 +1,5 @@
 
-Link >>> https://colab.research.google.com/drive/1LSXjII2WVPlVhZJ1jBXRmAZy1GGHsbsH?usp=sharing
+# Link >>> https://colab.research.google.com/drive/1LSXjII2WVPlVhZJ1jBXRmAZy1GGHsbsH?usp=sharing
 
 ## Def RPS game function
 ## ask Input user name, print game rule
