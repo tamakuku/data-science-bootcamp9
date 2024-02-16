@@ -1,4 +1,6 @@
 
+# Link >>> https://colab.research.google.com/drive/1uDgQEttuz78cvsSq8D-_0ZxlHmzE2IgJ?usp=sharing
+
 ## build chat bot function, for buy pizza
 ## ask Input user name, print menu name & price
 ## each choose menu will + bills value
