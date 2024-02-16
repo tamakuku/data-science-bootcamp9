@@ -1,4 +1,11 @@
 
+Link >>> https://colab.research.google.com/drive/1LSXjII2WVPlVhZJ1jBXRmAZy1GGHsbsH?usp=sharing
+
+## Def RPS game function
+## ask Input user name, print game rule
+## each turn will get 1 Score for winner
+## print summary score when Stop play
+
 game <- function() {
   
   ## return score value
