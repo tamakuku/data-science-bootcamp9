@@ -5,7 +5,7 @@ install.packages( "tidyverse")
 install.packages( "caret" )
 
 library( tidyverse )
-library( caret ) ## use for Supervised Learning Model
+library( caret ) ## for Supervised Learning Model
 
 
 #### use churn.csv to build model with glm method
