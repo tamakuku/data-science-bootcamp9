@@ -1,3 +1,4 @@
+
 install.packages("ggplot2")
 install.packages("patchwork")
 install.packages("tidyverse")
@@ -7,7 +8,7 @@ library(patchwork)
 library(tidyverse)
 library(readr)
 
-######### Home Work 01 *************
+
 ### 1. plot 5 chart with mpg dataframe
 ### 2. write document in markdown
 ### 3. explain what insight we got from each chart.
