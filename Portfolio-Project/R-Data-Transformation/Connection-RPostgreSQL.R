@@ -2,10 +2,9 @@
 library(tidyverse)
 library(RPostgreSQL)
 
+### write data from Homework SQL (pizza shop) into PostgreSQL sever
+### send answers code by Notion too
 
-## ****** Home Work 02 *****
-## write data from Homework SQL (pizza shop) into PostgreSQL sever
-## send answers code by Notion too
 
 ## 1. connect to PostgreSQL sever
 install.packages("RPostgreSQL")
