@@ -1,3 +1,4 @@
+
 -- Q1 select ProductName, UnitPrice and UnitsInStock column from Products table.
 SELECT ProductName, UnitPrice, UnitsInStock
 FROM Products;
