@@ -1,2 +1,57 @@
 
-Link >>> https://colab.research.google.com/drive/1jRjACOS4PPvGh7yck0Ney0HGhAoMK3hd?usp=sharing
+# Link >>> https://colab.research.google.com/drive/1jRjACOS4PPvGh7yck0Ney0HGhAoMK3hd?usp=sharing
+
+## Requests 5 url
+## Extract data from 5 column ( name, language, genres, runtime, status )
+## Write to csv file
+
+
+## import 'requests' module only 'get' function
+## and 'time' module only 'sleep' function
+from requests import get
+from time import sleep
+import pandas as pd # manage dataframe
+
+
+## test request API
+url = "https://api.tvmaze.com/shows/"
+
+test_resp = get(url)
+
+print(test_resp)
+
+data = []  # for collecting results into dictionary
+
+## use for loop request index url 1-5
+for i in range(1, 6):  # index python start with 0
+
+    new_url = url + str(i)
+
+    resp = get(new_url).json() # get url >>> show data in json format
+
+    # extract data from 5 column
+    name = resp[ "name" ]
+    language = resp[ "language" ]
+    genres = resp[ "genres" ]
+    runtime = resp[ "runtime" ]
+    status = resp[ "status" ]
+
+    print( name, language, genres, runtime, status )
+
+    sleep(1)  # will pause for 1 second after each loop iteration
+
+    # append result into disctionary above
+    data.append(
+        { "name": name,
+            "language": language,
+            "genres": genres,
+            "runtime": runtime,
+            "status": status }
+    )
+
+
+## return data from for loop into dataframe
+df = pd.DataFrame(data)
+
+## write to CSV file
+df.to_csv("tv_maze_5_show.csv", index=False)
