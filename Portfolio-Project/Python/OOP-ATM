@@ -1,2 +1,84 @@
 
 Link >>> https://colab.research.google.com/drive/139u3WvYXUr3kQbtvXfjArbGi_cT0Uvzp?usp=sharing
+
+## build Class ATM, add 1 account
+## have 4 Attribute
+## Def 6 function
+
+
+import random # for def send OTP function
+
+class ATM :
+    def __init__ (self, account_name, bank_name, balance) :
+            self.account_name = account_name
+            self.bank_name = bank_name
+            self.balance = balance
+
+    ## def 6 function
+    def __str__ (self) :
+        return f"This is your account info. \n account_name: {self.account_name}, \n bank: {self.bank_name}, \n balance: {self.balance} THB"
+
+    def check_balance(self) :
+        print( f"Balance: {self.balance} THB" )
+
+    def deposit(self, money) :
+        self.balance = self.balance + money
+        print( f"Deposit successfully: your new balance: {self.balance} THB" )
+
+    def withdraw(self, money) :
+        self.balance = self.balance - money
+        print( f"Withdraw successfully: your left balance: {self.balance} THB" )
+
+    def get_OTP(self):
+        otp = random.randint(1000, 9999)
+        print(f"This is your OTP: {otp} and will expire in 2 minutes.")
+        return otp
+
+
+    ## change account name function with 3 step
+    ## 01 ask current account name >>> if True go step 02, if False stop
+    ## 02 send OTP & input confirm OTP >>> if True go step 03, if False stop
+    ## 03 input new account name >>> print update
+    def change_account_name(self):
+        current_account_name = input( "Enter your current account name: " )
+
+        if current_account_name != self.account_name:
+            print( "Incorrect account name, process canceled." )
+
+            return
+
+        send_otp = self.get_OTP()
+        comfirm_otp = int( input("Enter the OTP received: ") )
+
+        if comfirm_otp == send_otp :
+            new_account_name = input( "Enter your new account name: " )
+
+            self.account_name = new_account_name
+
+            print( f"updated successfully. New account name is: {self.account_name}" )
+
+        else:
+            print( "OTP not correct. change account name canceled." )
+
+
+## create first account into ATM class
+acc1 = ATM("tama", "kbank", 10000)
+
+
+## check account info
+print(acc1)
+
+## test deposit function
+acc1.deposit(5000)
+
+## test withdraw function
+acc1.withdraw(5000)
+
+## test change account name function >>> but input wrong current account name
+acc1.change_account_name()
+
+## test change account name function >>> but input wrong OTP
+acc1.change_account_name()
+
+## test change account name function >>> input all correct!
+acc1.change_account_name()
