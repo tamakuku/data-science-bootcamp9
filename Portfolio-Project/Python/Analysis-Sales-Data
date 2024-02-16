@@ -1,5 +1,5 @@
 
-# Links >>> https://datalore.jetbrains.com/notebook/UoqJjTJGNYJGKQOqNWFVTD/Dh7w6XZbTvIPymvWFRrOBf
+# Link >>> https://datalore.jetbrains.com/notebook/UoqJjTJGNYJGKQOqNWFVTD/Dh7w6XZbTvIPymvWFRrOBf
 
 ### preview and clean data from csv file
 ### analysis data
@@ -150,16 +150,35 @@ df_group_product = df_group_product.sort_values( by = ['Count_Order', 'Total_Sal
 df_group_product
 
 
-# TODO 10 - plot at least 2 plots, show sales performance each regions by sales and quantity.
+### TODO 10 - plot at least 2 plots, show sales performance each regions by sales and quantity.
 
 ## plot Bar chart >>> Sales performance by Region in 2019
-df_orderDate_2019
+import matplotlib.pyplot as plt
+
+Region = df_2019["Region"] # filter for X-axis
+Sales = df_2019["Sales"] # filter for y-axis
+
+plt.figure( figsize=(10, 5) )
+plt.subplot(1, 2, 1)
+plt.bar( Region, Sales, color= "gold" )
+plt.title("Sales Performance by Region in 2019")
+plt.xlabel("Region")
+plt.ylabel("Sales")
+plt.xticks(rotation=45)
 
 
+## plot scatter plot >>> compare category performance by Sales, Profit in 2019
+import matplotlib.pyplot as plt
 
+# Select columns for x and y axes
+x_column = "Sales"
+y_column = "Profit"
 
-
-
-
-
-
+# Create scatter plot
+plt.figure( figsize=(8, 6) )
+plt.scatter( df_2019[x_column], df_2019[y_column], alpha=0.5, color = "red" )
+plt.title( f"Scatter Plot of {y_column} vs {x_column} in 2019" )
+plt.xlabel(x_column)
+plt.ylabel(y_column)
+plt.grid(True)
+plt.show()
