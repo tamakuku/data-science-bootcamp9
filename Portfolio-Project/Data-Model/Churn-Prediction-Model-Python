@@ -1,2 +1,50 @@
 
 Link >>> https://colab.research.google.com/drive/1K4eVfD0NLN0B33awu1BsOB3eDYwlxe0T?usp=sharing
+
+### build Logistic Regression Model
+## by 4 Step ML work flow
+## with churn dataframe
+
+
+## import module
+from sklearn.linear_model import LogisticRegression # model
+from sklearn.model_selection import train_test_split # split data
+import pandas as pd # manage dataframe
+
+
+## read csv file
+churn = pd.read_csv("churn.csv")
+
+## preview dataframe
+churn.head()
+
+
+## select X, y variables
+X = churn[["totaldayminutes", "totaldaycalls", "totaldaycharge", "numbercustomerservicecalls"]]
+y = churn["churn"]
+
+
+## Step 01 split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.20, random_state=42
+)
+
+
+## Step 02 train model
+model = LogisticRegression() ## choose model
+model.fit(X_train, y_train) ## model fitting
+
+
+## Step 03 score
+train_pred = model.predict(X_train)
+test_pred = model.predict(X_test)
+
+
+## Step 04 evaluate
+train_accuracy = accuracy_score(y_train, train_pred)
+test_accuracy = accuracy_score(y_test, test_pred)
+
+
+## print error metric
+print("Train Accuracy:", train_accuracy)
+print("Test Accuracy:", test_accuracy)
