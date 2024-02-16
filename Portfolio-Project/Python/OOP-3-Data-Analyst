@@ -1,2 +1,54 @@
 
 link >>> https://colab.research.google.com/drive/1ckyJ11IA-PijqgOZ9-_cmI3rLMvD_XNs?usp=sharing
+
+## build Class data analyst, add 3 people
+## with 5 Attribute
+## and Def 5 function
+
+
+## build class DA
+class DA :
+    def __init__( self, name, age, skill, salary ) :
+        self.name = name
+        self.age = age
+        self.skill = skill
+        self.salary = salary
+
+    ## def 5 function
+    def show_attributes(self):
+        return f"Name: {self.name} \nAge: {self.age} \nSkill: {self.skill} \nSalary: {self.salary}"
+
+    def learning( self, name ) :
+        print( f"My name is {name}, I'm learning bootcamp_09 for upskill now!." )
+
+    def new_jobs( self, position ) :
+        print( f"I'm looking for a new jobs as {position}." )
+
+    def plus_salary( self, growth ) :
+        self.salary = self.salary + growth
+        print( f"I would like to growth more {growth} salary." )
+
+    def update_salary( self ) :
+        print( f"Now, I got a new jobs with new salary is {self.salary}." )
+
+
+## then add 3 people
+DA01 = DA( "Tama", 36, "R", 45000 )
+DA02 = DA( "Kuku", 28, "SQL", 40000 )
+DA03 = DA( "Auau", 25, "Python", 35000 )
+
+
+## test call DA02 show all attribute
+print( DA02.show_attributes() )
+
+## test learning function by DA02
+DA02.learning( DA02.name )
+
+## test new_jobs function by DA02
+DA02.new_jobs( "Data Science" )
+
+## test plus_salary function by DA02
+DA02.plus_salary( 5000 )
+
+## test update_salary function by DA02
+DA02.update_salary()
