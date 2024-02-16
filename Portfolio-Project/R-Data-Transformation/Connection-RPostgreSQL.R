@@ -1,18 +1,14 @@
 
-library(tidyverse)
+install.packages("RPostgreSQL")
+install.packages("tidyverse")
+
 library(RPostgreSQL)
+library(tidyverse)
 
 ### write data from Homework SQL (pizza shop) into PostgreSQL sever
 ### send answers code by Notion too
 
-
-## 1. connect to PostgreSQL sever
-install.packages("RPostgreSQL")
-
-library(RPostgreSQL)
-library(tidyverse)
-
-## 2. use dbConnect( ) to create connection to sever and return into value.
+## 1. use dbConnect( ) to create connection to PostgreSQL sever and return into value.
 con_tama_sever <- dbConnect(
   PostgreSQL(),
   host = "arjuna.db.elephantsql.com",
@@ -22,16 +18,11 @@ con_tama_sever <- dbConnect(
   port = 5432 ## default port in PostgreSQL sever is 5432
 )
 
+## connection
 con_tama_sever
 
-## 3. Take SQL code from homework pizza shop in SQL live into R and create to dataframe by tribble() function.
 
-## install.packages("dpylr") and call library(tidyverse) for using tribble() function.
-install.packages("dpylr")
-
-library(dpylr)
-
-## create 4 dataframe : 1) shops 2) customers 3) menu 4) orders.
+## 2. create 4 dataframe : 1) shops 2) customers 3) menu 4) orders. by tribble() function.
 shops_df <- tribble(
   ~shop_id, ~shop_location,
   1, "Bangkok",
@@ -82,7 +73,8 @@ orders_df <- tribble(
   14, "2022-09-09", 8, 4, 7,
   15, "2022-09-10", 1, 2, 2 )
 
-## 4. and use dbWriteTable() send these dataframe into PostgreSQL sever.
+
+## 3. and use dbWriteTable() send these dataframe into PostgreSQL sever.
 dbWriteTable(con_tama_sever, "shops", shops_df)
 
 dbWriteTable(con_tama_sever, "customers", customers_df)
@@ -94,5 +86,6 @@ dbWriteTable(con_tama_sever, "orders", orders_df)
 ## then use dbListTables() recheck tables in PostgreSQL sever again.
 dbListTables(con_tama_sever)
 
-## 5. end with close connection from PostgreSQL sever.
+
+## 4. end with close connection from PostgreSQL sever.
 dbDisconnect(con_tama_sever)
