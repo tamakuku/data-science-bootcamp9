@@ -1,4 +1,8 @@
--- Create Table Pizza Shops โดยมีข้อมูล 4 Column ได้แก่ shops, customers, menu, orders
+
+Link >>> https://replit.com/@spanthu/PizzaShopDatabase
+
+
+-- Create Table Pizza Shops with 4 column: shops, customers, menu, orders
 CREATE TABLE shops
 ( shop_id INT,
   shop_location TEXT);
@@ -20,6 +24,8 @@ CREATE TABLE orders
   shop_id INT,
   menu_id INT);
 
+
+-- insert data into each column
 INSERT INTO shops
   VALUES
   (1, 'Bangkok'),
@@ -69,18 +75,17 @@ VALUES
 (14, '2022-09-09', 8, 4, 7),
 (15, '2022-09-10', 1, 2, 2);
 
+
+-- Preview data each table
 .mode box
 SELECT * FROM shops;
-
 SELECT * FROM customers;
-
 SELECT * FROM menu;
-
 SELECT * FROM orders;
 
 
--- จากนั้นลองดึงข้อมูล ตามเงื่อนไขที่กำหนดดังนี้
--- Query 1 Join 3 Table โดยใช้ JOIN ON และ SUM เพื่อดูรายชื่อลูกค้า ที่มียอดสั่งซื้อ pizza รวมมากกว่า 500
+-- try query data from each question
+-- Query 1: join 3 table with JOIN ON >>> select customer name that have total spend more than 500.
 SELECT 
   customer_name,
   SUM(menu_price) AS total_spend
@@ -92,8 +97,7 @@ HAVING total_spend > 500
 ORDER BY total_spend DESC;
 
 
--- Query 2 Join 3 Table ด้วย WHERE แล้วใช้ COUNT เพื่อดูว่า Shop ที่มีจำนวน Order มากที่สุด โดยเรียงจาก มากสุด ไป น้อยสุด 3 อันดับแรก
-SELECT
+-- Query 2: join 3 table by WHERE clause, then count order show by 3 first shop location that have most order.
     shop_location,
     COUNT(*) AS count_orders
 FROM 
@@ -106,7 +110,7 @@ ORDER BY 2 DESC
 LIMIT 3;
 
 
--- Query 3 Join 3 Table ด้วย JOIN ON แล้วใช้ Subqueries แบบ Standard เพื่อดึง firstname ลูกค้า ที่สั่งซื้อเฉพาะ Menu Beef_pizza และ country อยู่ใน Japan
+-- Query 3: join 3 table with JOIN ON and subqueries for select only firstname customer that order beef pizza and come from Japan.
 SELECT
     customer_name,
     menu_name,
@@ -120,7 +124,8 @@ JOIN
   ON T2.menu_id = T3.menu_id;
 
 
--- Query 4 Join 3 Table แล้วใช้ WITH สร้าง Subqueries สำหรับเงื่อนไข ในการดึงข้อมูล หายอดขาย Pork_pizza ของ Shop ที่ขึ้นต้นด้วยตัว C เฉพาะในเดือน 08 (ใช้ STRFTIME)
+-- Query 4: join 3 table with JOIN ON and use WITH for subqueries,
+-- extract total sale each shop location have first letter is C and only pork pizza menu in September.
 WITH
 Shop_C AS (SELECT * FROM shops WHERE shop_location LIKE 'C%'),
 Menu_Pork AS (SELECT * FROM menu WHERE menu_name = 'Pork_pizza'),
@@ -138,7 +143,9 @@ GROUP BY 1
 ORDER BY Total_Sale DESC;
 
 
--- query 5 Join 4 Table ด้วย WHERE Clause และ ใช้ WITH ทำเงื่อนไขทั้งหมดให้เป็น Subqueries เพื่อหายอดขายทุกร้าน ยกเว้นสาขา Bangkok เลือกเฉพาะลูกค้า Thailand กับ japan และที่มียอดสั่งซื้อเฉลี่ย ไม่เกิน 500 โดยเรียงจากยอดขาย มากสุดไปน้อยสุด
+-- Query 5: join 4 table with WHERE clause and use WITH for subqueries
+-- extrac total sale from all shop except Bangkok,
+-- and choose customer from Thailand and Japan that have average spend not over 500.
 WITH
 not_BKK_shop AS (SELECT * from shops where shop_location <> 'Bangkok'),
 TH_JP_customers AS (SELECT * from customers WHERE customer_country IN ('Thailand', 'Japan'))
