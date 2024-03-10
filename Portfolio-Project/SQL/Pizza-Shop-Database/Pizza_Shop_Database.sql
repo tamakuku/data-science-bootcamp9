@@ -78,7 +78,8 @@ VALUES
 
 
 -- Preview data each table
-.mode box -- use for preview data in table format-- use for preview data in table format
+-- use .mode box for preview data in table format-- use for preview data in table format
+.mode box
 
 SELECT * FROM shops;
 SELECT * FROM customers;
