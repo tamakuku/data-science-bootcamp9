@@ -25,7 +25,7 @@ CREATE TABLE orders
   menu_id INT);
 
 
--- insert data into each column
+-- insert data into each table
 INSERT INTO shops
   VALUES
   (1, 'Bangkok'),
@@ -85,6 +85,7 @@ SELECT * FROM orders;
 
 
 -- try query data from each question
+
 -- Query 1: join 3 table with JOIN ON >>> select customer name that have total spend more than 500.
 SELECT 
   customer_name,
@@ -98,6 +99,7 @@ ORDER BY total_spend DESC;
 
 
 -- Query 2: join 3 table by WHERE clause, then count order show by 3 first shop location that have most order.
+SELECT
     shop_location,
     COUNT(*) AS count_orders
 FROM 
