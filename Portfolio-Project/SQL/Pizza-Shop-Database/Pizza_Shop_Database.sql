@@ -2,6 +2,7 @@
 Link >>> https://replit.com/@spanthu/PizzaShopDatabase
 
 
+
 -- Create Table Pizza Shops with 4 column: shops, customers, menu, orders
 CREATE TABLE shops
 ( shop_id INT,
@@ -84,9 +85,9 @@ SELECT * FROM menu;
 SELECT * FROM orders;
 
 
--- try query data from each question
+-- try query data from each question --
 
--- Query 1: join 3 table with JOIN ON >>> select customer name that have total spend more than 500.
+-- Question 1: join 3 table with JOIN ON >>> select customer name that have total spend more than 500.
 SELECT 
   customer_name,
   SUM(menu_price) AS total_spend
@@ -94,11 +95,13 @@ FROM customers AS Cus
 JOIN orders AS Ord ON Cus.customer_id = Ord.customer_id
 JOIN menu AS Me ON Ord.menu_id = Me.menu_id
 GROUP BY customer_name
-HAVING total_spend > 500
+HAVING total_spend > 1000
 ORDER BY total_spend DESC;
+-- Answers Q1: have 3 customer that have total spend more than 500.
+-- Tama, Kuku, Jugjug
 
 
--- Query 2: join 3 table by WHERE clause, then count order show by 3 first shop location that have most order.
+-- Question 2: join 3 table by WHERE clause, then count order show by 3 first shop location that have most order.
 SELECT
     shop_location,
     COUNT(*) AS count_orders
@@ -110,9 +113,11 @@ WHERE T1.shop_id = T2.shop_id AND T2.menu_id = T3.menu_id
 GROUP by 1
 ORDER BY 2 DESC
 LIMIT 3;
+-- Answers Q2: have 3 shop location that have most order.
+-- Chaing Mai, Chonburi, Udon Thani
 
 
--- Query 3: join 3 table with JOIN ON and subqueries for select only firstname customer that order beef pizza and come from Japan.
+-- Question 3: join 3 table with JOIN ON and subqueries for select only firstname customer that order beef pizza and come from Japan.
 SELECT
     customer_name,
     menu_name,
@@ -124,9 +129,10 @@ JOIN orders AS T2
 JOIN
   (SELECT * FROM menu WHERE menu_name = 'Beef_pizza') AS T3
   ON T2.menu_id = T3.menu_id;
+-- Answers Q3: The customer is Tama that order beef pizza and come from Japan.
 
 
--- Query 4: join 3 table with JOIN ON and use WITH for subqueries,
+-- Question 4: join 3 table with JOIN ON and use WITH for subqueries,
 -- extract total sale each shop location have first letter is C and only pork pizza menu in September.
 WITH
 Shop_C AS (SELECT * FROM shops WHERE shop_location LIKE 'C%'),
@@ -143,10 +149,11 @@ JOIN Menu_Pork AS T2 ON T1.menu_id = T2.menu_id
 JOIN Shop_C AS T3 ON T1.shop_id = T3.shop_id
 GROUP BY 1
 ORDER BY Total_Sale DESC;
+-- Answers Q4: The shop location is Chonburi and Chaing Mai.
 
 
--- Query 5: join 4 table with WHERE clause and use WITH for subqueries
--- extrac total sale from all shop except Bangkok,
+-- Question 5: join 4 table with WHERE clause and use WITH for subqueries
+-- extract total sale from all shop except Bangkok,
 -- and choose customer from Thailand and Japan that have average spend not over 500.
 WITH
 not_BKK_shop AS (SELECT * from shops where shop_location <> 'Bangkok'),
@@ -164,3 +171,4 @@ AND T3.menu_id = T4.menu_id
 GROUP BY 1
 HAVING avg_sale <=500
 order by avg_sale DESC;
+-- Answers Q5: The shop location is Ranong, Chonburi, Chaing Mai.
