@@ -2,7 +2,6 @@
 Link >>> https://replit.com/@spanthu/PizzaShopDatabase
 
 
-
 -- Create Table Pizza Shops with 4 column: shops, customers, menu, orders
 CREATE TABLE shops
 ( shop_id INT,
