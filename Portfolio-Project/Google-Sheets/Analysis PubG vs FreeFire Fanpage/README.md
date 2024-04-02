@@ -7,7 +7,7 @@ website https://data-science-bootcamp1.teachable.com/
 
 Thanks for the practice.
 
-# about This practice
+# about This Project
 
 ## we will make analysis report from 'Full Dataset' sheet that combined from 'FreeFire' and 'PubG' sheet.
 ### create new columns for more metrics for use analysis by multples formula.

@@ -3,39 +3,32 @@
 
 Dynamic-Function-with-Google-Sheet
 
-This project come from practice made by P'Bew (วิศรกรรีพอร์ต).
+This project come from practice made by Data Rockie School.
 
-website https://reportingengineer.com/
+website https://data-science-bootcamp1.teachable.com/
 
 Thanks for the practice.
 
-## 01 Overview performance by Month in whole Year
-- Sales and Traffic performance
-- Campaign each Month performance
-- GMV Campaign vs BL (or normal day) performance
+# about this Project is combine multiples formula for extract and transfrom data as below.
 
-## 02 YOY% ( Year on Year ) Growth by Category
-- Compare Growth Sales by monthly & Qaurter
+## 01 Filter and Sort with Dropdown List & Checkbox
+- use =FILTER() and =SORT() with multiple conditions (AND, OR) for extract data
+- use =SORT( FILTER()) with Dropdown List + Check Box for extract data
 
-## 03 Store performance by Weekly
-- Track neccessary metric our shop health
+## 02 Conditional Formatting with Checkbox
+- combine Conditionnals Formattiing with Check Box for build auto Heat Map chart
 
-## 04 Voucher performance each period
-- Track voucher using from each campaign
+## 03 Dynamic Query with Dropdown List
+- use =QUERY() + Filter data with Dropdown List for extract data
 
-## 05 Specific SKU Voucher performance
-- Special voucher with product selected from each campaign
+## 04 Array Vlookup & Xlookup
+- comebine use =Array() IFFERROR() with XLOOKUP, VLOOKUP for extract data
 
-## 06 Monthly performance (example Dec)
-- Daily performance each Category
-- Total performance each Category
-- Average GMV each Segment Day and Compare Month by Month
-- Flash Sale performance each Campaign
+## 05 Convert TH to EN Date
+- combine use =Array() with DATE(), TRIM(), RIGHT, MID or LEFT() for transform data
 
-## 07 Mega Campaign monitor performance (example 12.12)
-- Overall performance every hours
-- Flash Sale performance
-- All Promotion and Media mechanic Campaign
+## 06 ID Card Parser seperate text pattern
+- use =Array() + REGEXEXTRACT() with IFS(), DATEDIF() for extract data with pattern 
 
-## 08 Sponsored Solution performance
-- tracking metric about Keyword Search performance from Lazada App
+## 07 Convert Cesius to Falenheit Function
+- use named function >>> buid function for transform data

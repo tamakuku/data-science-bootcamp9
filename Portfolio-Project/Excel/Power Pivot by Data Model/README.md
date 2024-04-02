@@ -6,7 +6,7 @@ website https://reportingengineer.com/
 
 Thanks for the practice.
 
-# about This practice
+# about This Project
 - we will build data model from 3 sheet (Sales, Dimstore, Dimproduct)
 - then use Power Pivot build Pivot Table + Slicer for automation real-time performance
 

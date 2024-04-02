@@ -6,7 +6,7 @@ website https://reportingengineer.com/
 
 Thanks for the practice.
 
-# about This practice
+# about This Project
 
 ## We will clean stacked data from 'Data' sheet.
 

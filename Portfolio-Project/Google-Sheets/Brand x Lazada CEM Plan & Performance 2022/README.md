@@ -5,8 +5,9 @@
 
 Brand-x-Lazada-CEM-Plan-&-Performance-2022-with-Google-Sheet
 
-This project come from my previously work as Store Manager in Data Report path. 
-that have multiples sheet designed tracking for Sales & Traffic performanace from Lazada Shop.
+This project come from my previously work as Store Manager in Data Report path.
+
+# about Project is designed tracking with multiples sheet for Sales & Traffic performanace from Lazada Shop.
 
 ## 01 Overview performance by Daily, Monthly in whole Year
 - Content, Sales and Traffic performance

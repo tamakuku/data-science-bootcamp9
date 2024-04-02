@@ -6,7 +6,8 @@
 Brand-x-Lazada-Overview-Performance-2022-with-Google-Sheet
 
 This project come from my previously work as Store Manager in Data Report path. 
-that have multiples sheet designed tracking for Sales & Traffic performanace from Lazada Shop.
+
+# about Project is designed tracking with multiples sheet for Sales & Traffic performanace from Lazada Shop.
 
 ## 01 Overview performance by Month in whole Year
 - Sales and Traffic performance
