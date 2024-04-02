@@ -1,6 +1,6 @@
 Power-Query-to-Pivot-with-Excel
 
-This practice made by P'Bew (วิศรกรรีพอร์ต)
+This project come from practice made by P'Bew (วิศรกรรีพอร์ต).
 
 website https://reportingengineer.com/
 
