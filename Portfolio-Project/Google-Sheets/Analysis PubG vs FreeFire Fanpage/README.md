@@ -9,8 +9,8 @@ Thanks for the practice.
 
 # about This practice
 
-## we will make analysis report from 'Full Dataset' sheet that combined from 'FreeFire' and 'PubG' sheet
-### create new columns for more metrics for use analysis by multples formula
+## we will make analysis report from 'Full Dataset' sheet that combined from 'FreeFire' and 'PubG' sheet.
+### create new columns for more metrics for use analysis by multples formula.
 - 'Total Enagagement' column by =SUM() from 'Likes', 'Reactions', 'Comments' and 'Post shares' column
 - 'Length Message' column by =LEN() >>> with 'Message' column
 - 'Segment Lenght Message' column by =IFS() >>> from 'Length Message' column with 3 conditions (Low, Medium, High)
@@ -20,7 +20,8 @@ Thanks for the practice.
 - 'Week' column manaul input week 1-4 for each months
 
 
-### Then use Pivot Table or =Query() formula and Conditionals Formatting >>> build Analysis Chart and Table reports >>> for answers with many questions as below
+### Then use Pivot Table or =Query( ) formula and Conditionals Formatting.
+### build Analysis Chart and Table reports >>> for answers with many questions as below.
 - Which posts and type of post is the best engagement?
 - What is top 5 post Shared?
 - What time is brand often post?
