@@ -1,4 +1,4 @@
-Data-Model-and-Power-Pivot-with-Excel
+Power-Pivot-and-Data-Model-with-Excel
 
 This practice made by P'Bew (วิศรกรรีพอร์ต)
 
