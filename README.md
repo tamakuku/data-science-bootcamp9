@@ -1,5 +1,5 @@
 
-# Data Science Bootcamp Batch 9
+# Alumni Data Science Bootcamp Batch 9
 Hi, everyone.
 
 My name is Suphakit Panthu (Top).
