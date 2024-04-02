@@ -26,10 +26,10 @@ you guys can see my portfolio in Portfolio-Project folder.
 - Python
 
 ## Learning Note
-_Click >>>_ https://www.notion.so/suphakit-panthu/Tama-Notes-Data-Learning-58a55cbd1f6d416994923dfe66cd2c2e?pvs=4
+[_Click >>>_](https://www.notion.so/suphakit-panthu/Tama-Notes-Data-Learning-58a55cbd1f6d416994923dfe66cd2c2e?pvs=4)
 
 ## Certicates
-_Click >>>_ https://www.notion.so/suphakit-panthu/Certificates-e5566f978ebb414d866d8bbb53df8c7c?pvs=4
+[_Click >>>_](https://www.notion.so/suphakit-panthu/Certificates-e5566f978ebb414d866d8bbb53df8c7c?pvs=4)
 
 
 ## Contact
