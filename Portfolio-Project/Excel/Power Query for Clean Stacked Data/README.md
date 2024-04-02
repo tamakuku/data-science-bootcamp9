@@ -9,6 +9,7 @@ Thanks for the practice.
 about This practice
 
 We will clean stacked data from 'Data' sheet.
+
 To the right format table by Power Query Editor with multiple steps as below.
 - Promote First Low as Headers
 - Filter Rows
