@@ -10,4 +10,4 @@ about This practice
 - how to build data model from 3 sheet (Sales, Dimstore, Dimproduct)
 - then use power pivot + slicer for make simple real-time dashboard performance
 
-Please click [Power_Pivot_by_Data_Model.xlsx](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/Excel/Power%20Pivot%20by%20Data%20Model/Power_Pivot_by_Data_Model.xlsx) for download file
+Please click [Power_Pivot_by_Data_Model.xlsx](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/Excel/Power%20Pivot%20by%20Data%20Model/Power_Pivot_by_Data_Model.xlsx) and press 'View raw' for download excel file
