@@ -25,6 +25,9 @@ you guys can see my portfolio in Project folder.
 - Machine Learning
 - Python
 
+## Learning Note
+_Click >>>_ https://www.notion.so/suphakit-panthu/R-Coding-b31af14b08aa4b82865277a7fd920913?pvs=4
+
 ## Certicates
 _Click >>>_ https://www.notion.so/suphakit-panthu/Certificates-e5566f978ebb414d866d8bbb53df8c7c?pvs=4
 
