@@ -1,4 +1,4 @@
-Power-Query-Clean-Stacked-Data-with-Excel
+Power-Query-to-Power-Pivot-with-Excel
 
 This practice made by P'Bew (วิศรกรรีพอร์ต)
 
