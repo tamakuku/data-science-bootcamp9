@@ -1,6 +1,5 @@
 
 # Data Science Bootcamp Batch 9
-Yolo~
 
 My name is Suphakit Panthu (Top).
 
@@ -31,3 +30,5 @@ _Click >>>_ https://www.notion.so/suphakit-panthu/Certificates-e5566f978ebb414d8
 Contact: spanthu@gmail.com
 
 Thanks for your interest.
+
+YOLO~
