@@ -3,7 +3,9 @@
 Hi, everyone.
 
 My name is Suphakit Panthu (Top).
+
 I'm always upskill for change career path from ecommerce to data.
+
 you guys can see my portfolio in Project folder.
 
 ## Topics learning of Bootcamp
