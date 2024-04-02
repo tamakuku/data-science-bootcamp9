@@ -2,8 +2,7 @@ Power-Pivot-and-Data-Model-with-Excel
 
 This practice made by P'Bew (วิศรกรรีพอร์ต)
 
-website [https://datayolk.net/data/cafe-sale-analysis-project/
-](https://reportingengineer.com/)
+website https://reportingengineer.com/
 
 Thanks for the practice.
 
