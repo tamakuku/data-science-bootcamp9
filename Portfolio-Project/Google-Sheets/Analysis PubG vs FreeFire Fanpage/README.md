@@ -31,5 +31,3 @@ Thanks for the practice.
 - Please segmentation post to 'promotion', 'news' and 'update patch game'
 - What about weekly and monthly engagement performance?
 - What about engagement performance between Weekday vs Weekend?
-
-Please click [Power_Pivot_by_Data_Model.xlsx](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/Excel/Power%20Pivot%20by%20Data%20Model/Power_Pivot_by_Data_Model.xlsx) and press 'View raw' for download excel file
