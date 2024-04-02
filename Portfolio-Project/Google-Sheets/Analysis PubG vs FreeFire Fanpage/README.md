@@ -20,9 +20,8 @@ Thanks for the practice.
 - 'Week' column manaul input week 1-4 for each months
 
 
-## Then use Pivot Table or =Query() formula and Conditionals Formatting >>> build Analysis Chart and Table reports
-
-## For answers with many questions as below
+### Then use Pivot Table or =Query() formula and Conditionals Formatting >>> build Analysis Chart and Table reports 
+### For answers with many questions as below
 - Which posts and type of post is the best engagement?
 - What is top 5 post Shared?
 - What time is brand often post?
