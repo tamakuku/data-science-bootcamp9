@@ -8,5 +8,7 @@ website [https://datayolk.net/data/cafe-sale-analysis-project/
 Thanks for the practice.
 
 about This practice
-- we have add 3 table into data model
+- how to build data model from 3 sheet (Sales, Dimstore, Dimproduct)
 - then use power pivot + slicer for make simple real-time dashboard performance
+
+Please download excel file attach
