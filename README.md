@@ -27,9 +27,7 @@ you guys can see my portfolio in Portfolio-Project folder.
 
 ## Learning Note >>> [_Click_](https://www.notion.so/suphakit-panthu/Tama-Notes-Data-Learning-58a55cbd1f6d416994923dfe66cd2c2e?pvs=4)
 
-## Certificates
-[_Click >>>_](https://www.notion.so/suphakit-panthu/Certificates-e5566f978ebb414d866d8bbb53df8c7c?pvs=4)
-
+## Certificates >>> [_Click_](https://www.notion.so/suphakit-panthu/Certificates-e5566f978ebb414d866d8bbb53df8c7c?pvs=4)
 
 ## Contact
 spanthu@gmail.com
