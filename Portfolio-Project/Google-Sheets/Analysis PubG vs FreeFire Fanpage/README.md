@@ -1,5 +1,5 @@
 
-# Google Sheet Link >>> [Analysis PubG vs FreeFire Fanpage](https://docs.google.com/spreadsheets/d/1Ce5JC_SB4egrqAwZfQ6sO68dKDcyqHWvU8P3QtsGSH4/edit?usp=sharing)
+# Raw File [_Click Google Sheet Link_](https://docs.google.com/spreadsheets/d/1Ce5JC_SB4egrqAwZfQ6sO68dKDcyqHWvU8P3QtsGSH4/edit?usp=sharing)
 
 This practice made by Data Rockie School
 
