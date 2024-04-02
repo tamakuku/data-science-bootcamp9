@@ -19,6 +19,7 @@ Thanks for the practice.
 - 'Day Type' column by =IF( WEEKDAY()) with 'Create date' >>> for segment date to WeekDay or WeekEnd
 - 'Week' column manaul input week 1-4 for each months
 
+
 ## Then use Pivot Table or =Query() formula and Conditionals Formatting >>> build Analysis Chart and Table reports
 
 ## For answers with many questions as below
