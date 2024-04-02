@@ -4,7 +4,7 @@ Yolo~
 
 My name is Suphakit Panthu (Top).
 
-I'm learning to be a data working man.
+I'm always upskill for change career path from ecommerce to data.
 
 you guys can see my portfolio in Project folder.
 
@@ -24,6 +24,9 @@ you guys can see my portfolio in Project folder.
 - Data Dashboard
 - Machine Learning
 - Python
+
+## Certicates
+_Click >>>_ https://www.notion.so/suphakit-panthu/Certificates-e5566f978ebb414d866d8bbb53df8c7c?pvs=4
 
 Contact: spanthu@gmail.com
 
