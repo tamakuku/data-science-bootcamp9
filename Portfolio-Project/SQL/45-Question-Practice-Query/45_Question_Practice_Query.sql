@@ -418,7 +418,7 @@ WHERE CategoryId = 10;
 SELECT * FROM Categories;
 
 
--- Q45 DELETE all data row 9-10 from Q49
+-- Q45 DELETE all data row 9-10 from Q43
 DELETE FROM Categories
 WHERE CategoryId IN ( 9, 10 );
 
