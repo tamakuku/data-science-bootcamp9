@@ -1,8 +1,4 @@
 
-Link for test run code >>> https://replit.com/@spanthu/PizzaShopDatabase
-
-Link for ER Diagram >>> https://dbdiagram.io/d/Pizza-Shop-Database-Diagram-65ed39aeb1f3d4062c89a872
-
 -- Create Table Pizza Shops with 4 column: shops, customers, menu, orders
 CREATE TABLE shops
 ( shop_id INT,
