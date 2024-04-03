@@ -5,9 +5,9 @@ Download Database File [_Click_](https://github.com/tamakuku/data-science-bootca
 
 45-Question-Practice-Query-with-SQL
 
-# This project practice will use SQL syntax for query data from 'Sqlite_Northwind.sqlite3'.
+## This project practice will use SQL syntax for query data from 'Sqlite_Northwind.sqlite3'.
 
-## For this database have 8 tables as below
+### For this database have 8 tables as below
     - Suppliers
     - Shippers
     - Products
