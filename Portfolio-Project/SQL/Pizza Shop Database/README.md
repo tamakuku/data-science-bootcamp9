@@ -11,7 +11,7 @@ website https://data-science-bootcamp1.teachable.com/
 
 Thanks for the practice.
 
-## This project will got practice 3 process as below
+## This project will got practice 4 process as below
 
 ### 01 Create 4 Table
 - shops
