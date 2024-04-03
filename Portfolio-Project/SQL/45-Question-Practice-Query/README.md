@@ -6,7 +6,7 @@ Download Database File [_Click_](https://github.com/tamakuku/data-science-bootca
 
 # This project practice will use SQL syntax for query data from 'Sqlite_Northwind.sqlite3'.
 
-## And this database have 8 tables as below
+## For this database have 8 tables as below
     - Suppliers
     - Shippers
     - Products
@@ -15,3 +15,18 @@ Download Database File [_Click_](https://github.com/tamakuku/data-science-bootca
     - Employees
     - Customers
     - Categories
+
+### And will use SQL code with all clause, Operaters and Sub-query for query data
+* Clause
+    - SELECT
+    - FROM
+    - JOIN ON
+    - WHERE 
+    - GROUP BY
+    - HAVEINg
+    - ORDER BY
+    - CASE WHEN THEN ELSE END
+* Operators
+    - +, -, *, /
+    - =, >=, <=, <>
+    - ALL AND OR IN
