@@ -17,7 +17,7 @@ Download Database File [_Click_](https://github.com/tamakuku/data-science-bootca
     - Customers
     - Categories
 
-### And will use SQL code with all clause, Operaters and Sub-query for query data
+### And will use SQL code with all clause, Operaters, Aggregate Function and Sub-query for query data
 * Clause
     - SELECT
     - FROM
@@ -31,3 +31,6 @@ Download Database File [_Click_](https://github.com/tamakuku/data-science-bootca
     - +, -, *, /
     - =, >=, <=, <>
     - ALL AND OR IN
+
+* Aggregate Function
+    - SUM, AVG, MIN, MAX, COUNT
