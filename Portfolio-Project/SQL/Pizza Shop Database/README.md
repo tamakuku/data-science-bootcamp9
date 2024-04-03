@@ -32,7 +32,7 @@ Thanks for the practice.
 - Aggregate Fucntion >>> SUM, AVG, MIN, MAX, COUNT
 - Basic Operators >>> AS, ROUND, LIKE, = > <
 
-### 06 List of questions
+### 04 List of questions
 - How many customers have total spend over 500?
 - How many shops have the most orders?
 - Who is the customer who orders beef pizza and comes from Japan?
