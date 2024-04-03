@@ -1,4 +1,7 @@
 
+-- Link ER Diagram >>> https://dbdiagram.io/d/Pizza-Shop-Database-Diagram-65ed39aeb1f3d4062c89a872
+
+
 -- Create Table Pizza Shops with 4 column: shops, customers, menu, orders
 CREATE TABLE shops
 ( shop_id INT,
@@ -73,20 +76,25 @@ VALUES
 (15, '2022-09-10', 1, 2, 2);
 
 
--- Preview data each table
--- use .mode box for preview data in table format-- use for preview data in table format
-.mode box
 
+-- use .print \n for print message in new line
+-- use .mode box for show data in box
+.print \n Review Tables
+.mode box
 SELECT * FROM shops;
 SELECT * FROM customers;
 SELECT * FROM menu;
 SELECT * FROM orders;
+.print \n ----------------------------------------------------------------------------
 
 
--- try query data from each question --
 
--- Question 1: join 3 table with JOIN ON >>> select customer name that have total spend more than 500.
-SELECT 
+-- Try list questions & query for the answers --
+.print \n Question 1: How many customers have total spend over 500?
+
+.print \n Query process: join 3 table with JOIN ON >>> select customer name that have total spend more than 500.
+
+SELECT
   customer_name,
   SUM(menu_price) AS total_spend
 FROM customers AS Cus
@@ -95,11 +103,16 @@ JOIN menu AS Me ON Ord.menu_id = Me.menu_id
 GROUP BY customer_name
 HAVING total_spend > 1000
 ORDER BY total_spend DESC;
--- Answers Q1: have 3 customer that have total spend more than 500.
--- Tama, Kuku, Jugjug
+
+.print \n Answers Q1: It has 3 customers who have spent more than 500: Tama, Kuku, and Jugjug.
+.print \n ----------------------------------------------------------------------------
 
 
--- Question 2: join 3 table by WHERE clause, then count order show by 3 first shop location that have most order.
+
+.print \n Question 2: How many shops have the most orders?
+  
+.print \n Query process: join 3 table by WHERE clause, then count order show by 3 first shop location that have most order.
+
 SELECT
     shop_location,
     COUNT(*) AS count_orders
@@ -111,11 +124,16 @@ WHERE T1.shop_id = T2.shop_id AND T2.menu_id = T3.menu_id
 GROUP by 1
 ORDER BY 2 DESC
 LIMIT 3;
--- Answers Q2: have 3 shop location that have most order.
--- Chaing Mai, Chonburi, Udon Thani
+
+.print \n Answers Q2: It has 3 shop locations that have the most orders: Chaing Mai, Chonburi, and Udon Thani.
+.print \n ----------------------------------------------------------------------------
 
 
--- Question 3: join 3 table with JOIN ON and subqueries for select only firstname customer that order beef pizza and come from Japan.
+
+.print \n Question 3: Who is the customer who orders beef pizza and comes from Japan?
+  
+.print \n Query process: join 3 table with JOIN ON and subqueries for select only firstname customer that order beef pizza and come from Japan.
+
 SELECT
     customer_name,
     menu_name,
@@ -127,11 +145,16 @@ JOIN orders AS T2
 JOIN
   (SELECT * FROM menu WHERE menu_name = 'Beef_pizza') AS T3
   ON T2.menu_id = T3.menu_id;
--- Answers Q3: The customer is Tama that order beef pizza and come from Japan.
+
+.print \n Answers Q3: The customer is Tama, who has ordered beef pizza and comes from Japan.
+.print \n ----------------------------------------------------------------------------
 
 
--- Question 4: join 3 table with JOIN ON and use WITH for subqueries,
--- extract total sale each shop location have first letter is C and only pork pizza menu in September.
+
+.print \n Question 4: What is the shop location started with a C letter and got a pork pizza order in September?
+
+.print \n Query process: join 3 table with JOIN ON and use WITH for subqueries, extract total sale each shop location have first letter is C and only pork pizza menu in September.
+
 WITH
 Shop_C AS (SELECT * FROM shops WHERE shop_location LIKE 'C%'),
 Menu_Pork AS (SELECT * FROM menu WHERE menu_name = 'Pork_pizza'),
@@ -147,12 +170,16 @@ JOIN Menu_Pork AS T2 ON T1.menu_id = T2.menu_id
 JOIN Shop_C AS T3 ON T1.shop_id = T3.shop_id
 GROUP BY 1
 ORDER BY Total_Sale DESC;
--- Answers Q4: The shop location is Chonburi and Chaing Mai.
+
+.print \n Answers Q4: The shop locations are Chonburi and Chaing Mai.
+.print \n ----------------------------------------------------------------------------
 
 
--- Question 5: join 4 table with WHERE clause and use WITH for subqueries
--- extract total sale from all shop except Bangkok,
--- and choose customer from Thailand and Japan that have average spend not over 500.
+
+.print \n Question 5: Where is the shop located outside of BKK that has customers from Thailand and Japan and has an average spend of less than 500?
+
+.print \n Query proess: join 4 table with WHERE clause and use WITH for subqueries extract total sale from all shop except Bangkok, and choose customer from Thailand and Japan that have average spend not over 500.
+
 WITH
 not_BKK_shop AS (SELECT * from shops where shop_location <> 'Bangkok'),
 TH_JP_customers AS (SELECT * from customers WHERE customer_country IN ('Thailand', 'Japan'))
@@ -169,4 +196,6 @@ AND T3.menu_id = T4.menu_id
 GROUP BY 1
 HAVING avg_sale <=500
 order by avg_sale DESC;
--- Answers Q5: The shop location is Ranong, Chonburi, Chaing Mai.
+
+.print \n Answers Q5: The shop locations are Ranong, Chonburi, and Chaing Mai.
+.print \n ----------------------------------------------------------------------------
