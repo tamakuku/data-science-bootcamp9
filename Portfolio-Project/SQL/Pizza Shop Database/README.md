@@ -3,6 +3,7 @@ Test Run Code [_Click Replit_](https://replit.com/@spanthu/PizzaShopDatabase)
 
 see ER-Diagram [_Click DB diagram_](https://dbdiagram.io/d/Pizza-Shop-Database-Diagram-65ed39aeb1f3d4062c89a872)
 
+Pizza-Shop-Database-with-SQL
 
 This project come from practice made by Data Rockie School.
 
