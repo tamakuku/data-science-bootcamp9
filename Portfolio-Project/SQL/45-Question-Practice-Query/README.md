@@ -3,6 +3,8 @@ Test Run Code [_Click Replit_](https://replit.com/@spanthu/45-Question-Practice-
 
 Download Database File [_Click_](https://github.com/tamakuku/data-science-bootcamp9/blob/ee1b182fc7c0f2a2eefce051204a20e826a70128/Portfolio-Project/SQL/45-Question-Practice-Query/Data-Base-File/Sqlite_Northwind.sqlite3) >>> Then press 'View raw'
 
+See Schema [_Click_](https://github.com/tamakuku/data-science-bootcamp9/blob/32acb59deae0df311bda2657a09fbbca9771bce3/Portfolio-Project/SQL/45-Question-Practice-Query/Northwind%20Schema.pdf)
+
 45-Question-Practice-Query-with-SQL
 
 ## This project practice will use SQL syntax for query data from 'Sqlite_Northwind.sqlite3'.
