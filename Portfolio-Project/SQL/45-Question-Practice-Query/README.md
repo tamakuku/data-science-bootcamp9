@@ -1,1 +1,17 @@
 
+Test Run Code [_Click Replit_](https://replit.com/@spanthu/45-Question-Practice-Query)
+Download Database File [_Click_](https://github.com/tamakuku/data-science-bootcamp9/blob/ee1b182fc7c0f2a2eefce051204a20e826a70128/Portfolio-Project/SQL/45-Question-Practice-Query/Data-Base-File/Sqlite_Northwind.sqlite3) >>> Then press 'View raw'
+
+45-Question-Practice-Query-with-SQL
+
+# This project practice will use SQL syntax for query data from 'Sqlite_Northwind.sqlite3'.
+
+## And this database have 8 tables as below
+    - Suppliers
+    - Shippers
+    - Products
+    - OrdersDetails
+    - Orders
+    - Employees
+    - Customers
+    - Categories
