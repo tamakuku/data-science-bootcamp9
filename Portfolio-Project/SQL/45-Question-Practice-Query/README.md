@@ -27,9 +27,13 @@ Download Database File [_Click_](https://github.com/tamakuku/data-science-bootca
     - HAVEINg
     - ORDER BY
     - CASE WHEN THEN ELSE END
+    - INSERT INTO
+    - UPDATE, SET, DELETE
+
 * Operators
     - +, -, *, /
     - =, >=, <=, <>
+    - &, |, ^
     - ALL AND OR IN
 
 * Aggregate Function
