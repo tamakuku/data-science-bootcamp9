@@ -1,6 +1,7 @@
 
 -- ER Diagram Link >>> https://dbdiagram.io/d/Car-Dealer-ER-Diagram-660df7cf03593b6b611f378b
 
+
 -- Create Vehicle Table
 CREATE TABLE Vehicles (
     VehicleID INTEGER PRIMARY KEY,
@@ -26,6 +27,7 @@ CREATE TABLE SalesTransaction (
     FOREIGN KEY (VehicleID) REFERENCES Vehicle(VehicleID),
     FOREIGN KEY (SalespersonID) REFERENCES Salesperson(SalespersonID)
 );
+
 
 -- Insert Data for Vehicle Table
 INSERT INTO Vehicles (ModelName, VehicleType, Price, FuelType) VALUES
@@ -62,6 +64,9 @@ INSERT INTO SalesTransaction (VehicleID, SalespersonID, SaleDate) VALUES
 (11, 1, '2024-03-04'),
 (12, 2, '2024-03-04');
 
+
+
+--use .mode box for print reults as table and .print \n for print text line
 -- Preview all table
 .mode box
 .print \n Preview Vehicles table
@@ -76,16 +81,19 @@ select * from SalesTransaction limit 5;
 .print \n ------------------------------------------------------------
 
 
+
+-- Query find the answers for each questions
 .print \n Question 01: Please show sales of each vehicle type and sort from max to min.
 
 .print \n Query process: Join 2 table with 'Vehicles' and 'SalesTransaction', and count transaction from each vehicle type, then show result group by vehicle type, and sort TolalSales from max to min
-
+  
 SELECT V.VehicleType, COUNT( S.TransactionID) AS TotalSales
 FROM Vehicles AS V
 JOIN SalesTransaction AS S ON V.VehicleID = S.VehicleID
 GROUP BY V.VehicleType
 ORDER BY TotalSales DESC;
 
+.print \n Answer: The total sales of each vehicle type are shown in the table above.
 .print \n ------------------------------------------------------------
 
 
@@ -99,7 +107,7 @@ JOIN SalesTransaction AS T ON S.SalespersonID = T.SalespersonID
 GROUP BY S.SalespersonID
 ORDER BY TotalTransaction DESC;
 
-.print \n Anwers: The best sales person is Jane Smith, who has sold 6 transaction.
+.print \n Answer: The best sales person is Jane Smith, who has sold 6 transaction.
 
 .print \n ------------------------------------------------------------
 
@@ -115,6 +123,7 @@ JOIN Vehicles AS V ON T.VehicleID = V.VehicleID
 GROUP BY S.SalespersonID
 ORDER BY TotalRevenue DESC;
 
+.print \n Answer: The total sales of each salesperson are shown in the table above.
 .print \n ------------------------------------------------------------
 
 
@@ -128,7 +137,7 @@ JOIN SalesTransaction AS S ON V.VehicleID = S.VehicleID
 WHERE STRFTIME( '%Y', SaleDate) = '2023'
 GROUP BY V.FuelType
 HAVING V.FuelType BETWEEN 'Electric' AND 'Petrol';
-
+.print \n Answer: The most popular vehicle type in 2023 is electric.
 .print \n ------------------------------------------------------------
 
 
@@ -144,4 +153,5 @@ CASE
 FROM Vehicles
 ORDER BY Price DESC;
 
+.print \n Answer: The segmentation of vehicle models is shown in the table above.
 .print \n ------------------------------------------------------------
