@@ -1,6 +1,7 @@
 
 -- ER Diagram View Link >>> https://dbdiagram.io/d/Customer-Review-Diagram-6519135bffbf5169f0ce6d84
 
+
 -- Create 3 tables
 CREATE TABLE customers (
   customer_id INTEGER PRIMARY KEY,
@@ -23,6 +24,7 @@ CREATE TABLE reviews (
   FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
   FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+
 
 
 -- Insert data into customers table
@@ -74,10 +76,12 @@ INSERT INTO reviews (customer_id, product_id, rating, review_text, date) VALUES
 
 
 
- --use .mode box for print reults as table and .print \n for print text line
+-- use .mode box for print reults as table
+-- use .print \n for print text line
+-- Preview tables
 .mode box
 .print \n Preview all tables
-  
+
 .print \n customers table
 SELECT * FROM customers LIMIT 5;
 
@@ -86,9 +90,11 @@ SELECT * FROM products LIMIT 5;
 
 .print \n reviews table
 SELECT * FROM reviews LIMIT 5;
-
 .print \n --------------------------------------------------------------------
 
+
+
+-- Query find the answers for each questions
 .print \n Questions 01: How many average of rating from each product?
 
 .print \n Query process: join 2 table with reviews and products table, caluate average of rating, then show result group by product_id
@@ -98,6 +104,7 @@ FROM products AS p
 JOIN reviews AS r ON p.product_id = r.product_id
 GROUP BY p.product_id;
 
+.print \n Answer: The average rating from each product is between 3.0 and 4.0.
 .print \n --------------------------------------------------------------------
 
 
@@ -111,6 +118,7 @@ JOIN reviews AS r ON c.customer_id = r.customer_id
 WHERE r.rating > 4
 GROUP BY c.customer_id;
 
+.print \n Answer: Have five customers give a rating higher than 4.
 .print \n --------------------------------------------------------------------
 
 
@@ -123,6 +131,7 @@ FROM customers AS c
 JOIN reviews AS r ON c.customer_id = r.customer_id
 GROUP BY c.customer_id;
 
+.print \n Answer: The total count of ratings for each customer is around 2–5.
 .print \n --------------------------------------------------------------------
 
 
@@ -134,9 +143,10 @@ SELECT
   STRFTIME('%w', date) AS day_of_week, 
   ROUND(AVG(rating)) AS avg_rating
 FROM reviews
-GROUP BY STRFTIME('%w', date)
+GROUP BY day_of_week
 ORDER BY day_of_week;
 
+.print \n Answer: Each day of the week has an average rating around 3.0-4.0.
 .print \n --------------------------------------------------------------------
 
 
@@ -150,6 +160,7 @@ JOIN reviews AS r ON p.product_id = r.product_id
 GROUP BY p.product_id
 HAVING avg_rating >= 3.5;
 
+.print \n Answer: We have two products: Products A and C, which have an average rating equal to or over 3.5.
 .print \n --------------------------------------------------------------------
 
 
@@ -162,6 +173,7 @@ FROM reviews
 WHERE review_text LIKE '%disappointed%'
 GROUP BY review_text;
 
+.print \n Answer: There are 2 reviews that have "disappointed" in the review text.
 .print \n --------------------------------------------------------------------
 
 
@@ -177,14 +189,19 @@ WHERE r.review_text LIKE '%excellent%'
    OR r.review_text LIKE '%recommend%'
    AND r.rating >= 4;
 
+.print \n Answer: There are 3 customers who have a positive review with a condition met in the question.
 .print \n --------------------------------------------------------------------
 
 
 .print \n Question 08: How many average text review lengths from each customer?
 
+.print \n Query process: join 2 table with reviews and customers table, calculate average of review_text length, and show result group by customer_id, then sort by average of review_text length from max to min
+  
 SELECT c.customer_id, c.name, AVG(LENGTH(r.review_text)) AS avg_length_review
 FROM customers AS c
 JOIN reviews AS r ON c.customer_id = r.customer_id
-GROUP BY c.customer_id;
+GROUP BY c.customer_id
+ORDER BY avg_length_review DESC;
 
+.print \n Answer: The average text review length for each customer is around 30.5–46.5.
 .print \n --------------------------------------------------------------------
