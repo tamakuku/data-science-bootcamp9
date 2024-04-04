@@ -144,7 +144,7 @@ ORDER BY day_of_week;
 
 .print \n Query process: join 2 table with reviews and products table, caluate average of rating group by product_id, and use having filter average of rating >= 3.5
 
-SELECT p.product_id, p.product_name, AVG(r.rating) AS avg_rating
+SELECT p.product_id, p.product_name, ROUND( AVG(r.rating), 2) AS avg_rating
 FROM products AS p
 JOIN reviews AS r ON p.product_id = r.product_id
 GROUP BY p.product_id
