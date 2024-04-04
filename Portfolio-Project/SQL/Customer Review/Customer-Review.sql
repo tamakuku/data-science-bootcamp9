@@ -174,7 +174,7 @@ FROM customers AS c
 JOIN reviews AS r ON c.customer_id = r.customer_id
 WHERE r.review_text LIKE '%excellent%' 
    OR r.review_text LIKE '%impressive%' 
-   OR r.review_text LIKE '%recommended%'
+   OR r.review_text LIKE '%recommend%'
    AND r.rating >= 4;
 
 .print \n --------------------------------------------------------------------
