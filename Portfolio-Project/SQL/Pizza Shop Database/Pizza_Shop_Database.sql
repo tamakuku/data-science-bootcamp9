@@ -2,7 +2,7 @@
 -- Link ER Diagram >>> https://dbdiagram.io/d/Pizza-Shop-Database-Diagram-65ed39aeb1f3d4062c89a872
 
 
--- Create Table Pizza Shops with 4 column: shops, customers, menu, orders
+-- Create 4 Table
 CREATE TABLE shops
 ( shop_id INT,
   shop_location TEXT);
@@ -25,7 +25,7 @@ CREATE TABLE orders
   menu_id INT);
 
 
--- insert data into each table
+-- insert data into each tables
 INSERT INTO shops
   VALUES
   (1, 'Bangkok'),
@@ -77,19 +77,25 @@ VALUES
 
 
 
--- use .print \n for print message in new line
 -- use .mode box for show data in box
-.print \n Review Tables
+-- use .print \n for print message in new line
 .mode box
+.print \n View shops table
 SELECT * FROM shops;
+
+.print \n View customers table
 SELECT * FROM customers;
+
+.print \n View menu table
 SELECT * FROM menu;
+
+.print \n View orders table
 SELECT * FROM orders;
 .print \n ----------------------------------------------------------------------------
 
 
 
--- Try list questions & query for the answers --
+-- List the questions & query for the answers --
 .print \n Question 1: How many customers have total spend over 500?
 
 .print \n Query process: join 3 table with JOIN ON >>> select customer name that have total spend more than 500.
@@ -104,7 +110,7 @@ GROUP BY customer_name
 HAVING total_spend > 1000
 ORDER BY total_spend DESC;
 
-.print \n Answers Q1: It has 3 customers who have spent more than 500: Tama, Kuku, and Jugjug.
+.print \n Answers: It has 3 customers who have spent more than 500: Tama, Kuku, and Jugjug.
 .print \n ----------------------------------------------------------------------------
 
 
@@ -125,7 +131,7 @@ GROUP by 1
 ORDER BY 2 DESC
 LIMIT 3;
 
-.print \n Answers Q2: It has 3 shop locations that have the most orders: Chaing Mai, Chonburi, and Udon Thani.
+.print \n Answers: It has 3 shop locations that have the most orders: Chaing Mai, Chonburi, and Udon Thani.
 .print \n ----------------------------------------------------------------------------
 
 
@@ -146,7 +152,7 @@ JOIN
   (SELECT * FROM menu WHERE menu_name = 'Beef_pizza') AS T3
   ON T2.menu_id = T3.menu_id;
 
-.print \n Answers Q3: The customer is Tama, who has ordered beef pizza and comes from Japan.
+.print \n Answers: The customer is Tama, who has ordered beef pizza and comes from Japan.
 .print \n ----------------------------------------------------------------------------
 
 
@@ -171,7 +177,7 @@ JOIN Shop_C AS T3 ON T1.shop_id = T3.shop_id
 GROUP BY 1
 ORDER BY Total_Sale DESC;
 
-.print \n Answers Q4: The shop locations are Chonburi and Chaing Mai.
+.print \n Answers: The shop locations are Chonburi and Chaing Mai.
 .print \n ----------------------------------------------------------------------------
 
 
@@ -197,5 +203,5 @@ GROUP BY 1
 HAVING avg_sale <=500
 order by avg_sale DESC;
 
-.print \n Answers Q5: The shop locations are Ranong, Chonburi, and Chaing Mai.
+.print \n Answers: The shop locations are Ranong, Chonburi, and Chaing Mai.
 .print \n ----------------------------------------------------------------------------
