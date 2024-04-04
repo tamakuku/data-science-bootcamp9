@@ -1,4 +1,3 @@
-
 -- ER Diagram View Link >>> https://dbdiagram.io/d/Customer-Review-Diagram-6519135bffbf5169f0ce6d84
 
 
@@ -95,10 +94,10 @@ SELECT * FROM reviews LIMIT 5;
 
 .print \n Query process: join 2 table with reviews and products table, caluate average of rating, then show result group by product_id
 
-  SELECT p.product_id, p.product_name, ROUND(AVG(r.rating)) AS average_rating
-  FROM products AS p
-  JOIN reviews AS r ON p.product_id = r.product_id
-  GROUP BY p.product_id;
+SELECT p.product_id, p.product_name, ROUND(AVG(r.rating)) AS average_rating
+FROM products AS p
+JOIN reviews AS r ON p.product_id = r.product_id
+GROUP BY p.product_id;
 
 .print \n --------------------------------------------------------------------
 
@@ -157,11 +156,12 @@ HAVING avg_rating >= 3.5;
 
 .print \n Question 06: How many negative review have "disappointed" in the review text?
 
-.print \n Query process: use like operators to find "disappointed" in review_text, then count all of this review
+.print \n Query process: use like operators to find "disappointed" in review_text, and count all of this review, then show result group by review_text
 
-SELECT COUNT(review_text) AS count_negative_review
+SELECT review_text, COUNT(review_text) AS count_negative_review
 FROM reviews
-WHERE review_text LIKE '%disappointed%';
+WHERE review_text LIKE '%disappointed%'
+GROUP BY review_text;
 
 .print \n --------------------------------------------------------------------
 
