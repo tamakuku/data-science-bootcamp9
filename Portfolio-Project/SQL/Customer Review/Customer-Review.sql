@@ -1,5 +1,5 @@
--- ER Diagram View Link >>> https://dbdiagram.io/d/Customer-Review-Diagram-6519135bffbf5169f0ce6d84
 
+-- ER Diagram View Link >>> https://dbdiagram.io/d/Customer-Review-Diagram-6519135bffbf5169f0ce6d84
 
 -- Create 3 tables
 CREATE TABLE customers (
