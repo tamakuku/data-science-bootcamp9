@@ -13,12 +13,12 @@ Thanks for the practice.
 
 ## This project will got practice 4 process as below
 
-### Create 3 table
+### 01 Create 3 table
 - Vehicles
 - Salesperson
 - SalesTransaction
 
-### Insert data into tables
+### 02 Insert data into tables
 - VehicleID, ModelName, VehicleType, Price, FuelType >>> Vihicles
 - SalespersonID, FirstName, LastName >>> Salesperson
 - TransactionID, VehicleID, SalespersonID, SaleDate >>> SalesTransaction

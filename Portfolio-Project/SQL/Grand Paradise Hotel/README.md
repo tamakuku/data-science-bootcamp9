@@ -13,11 +13,11 @@ Thanks for the practice.
 
 ## This project will got practice 4 process as below
 
-### Create 2 table
+### 01 Create 2 table
 - Rooms
 - Reservations
 
-### Insert data into tables
+### 02 Insert data into tables
 - room_id, room_type, status >>> Rooms
 - reservation_id, room_id, customer_id, check_in_date, check_out_date, amount_paid >>> Reservations
 

@@ -13,12 +13,12 @@ Thanks for the practice.
 
 ## This project will got practice 4 process as below
 
-### Create 3 table
+### 01 Create 3 table
 - customers
 - products
 - reviews
 
-### Insert data into tables
+### 02 Insert data into tables
 - customer_id, name, contact_info >>> customers
 - product_id, product_name >>> products
 - review_id, customer_id, product_id, rating, review_text >>> reviews
