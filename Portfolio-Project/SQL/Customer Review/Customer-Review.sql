@@ -75,17 +75,16 @@ INSERT INTO reviews (customer_id, product_id, rating, review_text, date) VALUES
 
 
  --use .mode box for print reults as table and .print \n for print text line
-.print \n Preview all tables
 .mode box
+.print \n Preview all tables
+  
 .print \n customers table
 SELECT * FROM customers LIMIT 5;
 
 .print \n products table
-
 SELECT * FROM products LIMIT 5;
 
 .print \n reviews table
-
 SELECT * FROM reviews LIMIT 5;
 
 .print \n --------------------------------------------------------------------
