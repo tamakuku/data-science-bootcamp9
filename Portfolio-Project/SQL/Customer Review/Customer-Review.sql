@@ -99,12 +99,12 @@ SELECT * FROM reviews LIMIT 5;
 
 .print \n Query process: join 2 table with reviews and products table, caluate average of rating, then show result group by product_id
 
-SELECT p.product_id, p.product_name, ROUND(AVG(r.rating)) AS average_rating
-FROM products AS p
-JOIN reviews AS r ON p.product_id = r.product_id
-GROUP BY p.product_id;
+SELECT p.product_id, p.product_name, AVG(r.rating) AS average_rating
+FROM Products p
+LEFT JOIN Reviews r ON p.product_id = r.product_id
+GROUP BY p.product_id, p.product_name;
 
-.print \n Answer: The average rating from each product is between 3.0 and 4.0.
+.print \n Answer: The average rating from each product is between 3.0 and 3.87.
 .print \n --------------------------------------------------------------------
 
 
