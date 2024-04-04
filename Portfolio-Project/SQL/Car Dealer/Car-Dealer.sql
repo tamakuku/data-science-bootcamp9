@@ -134,9 +134,8 @@ ORDER BY TotalRevenue DESC;
 SELECT V.FuelType, COUNT(S.TransactionID) AS TotalSales
 FROM Vehicles AS V
 JOIN SalesTransaction AS S ON V.VehicleID = S.VehicleID
-WHERE STRFTIME( '%Y', SaleDate) = '2023'
-GROUP BY V.FuelType
-HAVING V.FuelType BETWEEN 'Electric' AND 'Petrol';
+WHERE STRFTIME( '%Y', SaleDate) = '2023' AND V.FuelType IN ('Electric', 'Petrol')
+GROUP BY V.FuelType;
 .print \n Answer: The most popular vehicle type in 2023 is electric.
 .print \n ------------------------------------------------------------
 
@@ -147,7 +146,7 @@ HAVING V.FuelType BETWEEN 'Electric' AND 'Petrol';
 
 SELECT ModelName, Price,
 CASE
-  WHEN Price > 1000000 THEN 'Flagship Model'
+  WHEN Price >= 1000000 THEN 'Flagship Model'
   ELSE 'Normal Model'
   END ModelSegment
 FROM Vehicles
