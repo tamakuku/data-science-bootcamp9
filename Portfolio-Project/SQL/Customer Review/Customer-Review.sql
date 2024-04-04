@@ -140,7 +140,15 @@ GROUP BY c.customer_id;
 .print \n Query process: use strftime function to get day of the week, and find average of rating, then group and sort result by day of week.
 
 SELECT
-  STRFTIME('%w', date) AS day_of_week, 
+  CASE STRFTIME('%w', date)
+    WHEN '0' THEN '07 Sunday'
+    WHEN '1' THEN '01 Monday'
+    WHEN '2' THEN '02 Tuesday'
+    WHEN '3' THEN '03 Wednesday'
+    WHEN '4' THEN '04 Thursday'
+    WHEN '5' THEN '05 Friday'
+    WHEN '6' THEN '06 Saturday'
+  END AS day_of_week,
   ROUND(AVG(rating)) AS avg_rating
 FROM reviews
 GROUP BY day_of_week
