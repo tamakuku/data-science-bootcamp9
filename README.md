@@ -6,7 +6,7 @@ My name is Suphakit Panthu (Top).
 
 I'm always upskill with passion would like to change career path from ecommerce into data.
 
-you guys can see my portfolio in Portfolio-Project folder.
+you guys can see my portfolio in [_Portfolio-Project Folder_](https://github.com/tamakuku/data-science-bootcamp9/tree/6797cf5115cc532edc6a2ea44a6c564b60cdef64/Portfolio-Project).
 
 ## Topics learning of Bootcamp
 ### First half
