@@ -24,7 +24,7 @@ Thanks for the practice.
 - TransactionID, VehicleID, SalespersonID, SaleDate >>> SalesTransaction
 
 ### 03 use SQL syntax query data to find the answers for questions
-- Clause >>> SELECT, CASE WHEN, FROM, JOIN ON, WHEN, GROUP BY, HAVING, ORDER BY
+- Clause >>> SELECT, CASE WHEN, FROM, JOIN ON, WHERE, GROUP BY, HAVING, ORDER BY
 - Aggregate Fucntion >>> SUM, AVG, MIN, MAX, COUNT
 - Basic Operators >>> AS, ROUND, LIKE, = > <, STRFTIME, BETWEEN, IN, AND
 

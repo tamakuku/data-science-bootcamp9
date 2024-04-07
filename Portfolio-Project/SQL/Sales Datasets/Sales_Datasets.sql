@@ -491,6 +491,39 @@ LIMIT 1;
 .print \n Answer: The customer with the highest total amount of payment is 'Thor'.
 .print \n ----------------------------------------------------------------------------
 
+/* Optional for Question 19 use WITH for CTE
+
+  WITH CustomerPayments AS (
+    SELECT
+      c.customer_id,
+      c.customer_name,
+      COALESCE(SUM(p.amount), 0) AS total_payments
+    FROM
+      Customers c
+      LEFT JOIN Orders o ON c.customer_id = o.customer_id
+      LEFT JOIN Payments p ON o.order_id = p.order_id
+    GROUP BY
+      c.customer_id, c.customer_name
+  ),
+  RankedCustomers AS (
+    SELECT
+      customer_id,
+      customer_name,
+      total_payments,
+      RANK() OVER (ORDER BY total_payments DESC) AS payment_rank
+    FROM
+      CustomerPayments
+  )
+  SELECT
+    customer_id,
+    customer_name,
+    total_payments
+  FROM
+    RankedCustomers
+  WHERE
+    payment_rank = 1;
+
+*/
 
 .print \n Question 20: Please rank products based on total revenue.
 
@@ -509,3 +542,17 @@ ORDER BY total_revenue DESC;
 
 .print \n Answer: The rank of products based on total revenue is shown in the table above.
 .print \n ----------------------------------------------------------------------------
+
+/* Optional for Question 20 use WITH for CTE
+
+WITH ProductRevenue AS (
+SELECT p.product_id, p.product_name, COALESCE(SUM(od.quantity * p.unit_price), 0) AS total_revenue
+FROM Products p
+LEFT JOIN Order_Details od ON p.product_id = od.product_id
+GROUP BY p.product_id, p.product_name
+)
+SELECT product_id, product_name, total_revenue,
+RANK() OVER (ORDER BY total_revenue DESC) AS revenue_rank
+FROM ProductRevenue;
+
+*/
