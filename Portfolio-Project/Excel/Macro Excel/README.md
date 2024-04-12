@@ -1,5 +1,5 @@
 
-Project Link [_Click Notion_](https://suphakit-panthu.notion.site/Excel-Macro-50c5d80bcb954e6a8e89b0eb98a7b366?pvs=4)
+Project Link [_Click Notion Link_](https://suphakit-panthu.notion.site/Excel-Macro-50c5d80bcb954e6a8e89b0eb98a7b366?pvs=4)
 
 Macro-with-Excel
 
