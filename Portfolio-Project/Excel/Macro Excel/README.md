@@ -10,4 +10,4 @@ Thanks for the practice.
 # about This Project
 - we will use macro excel to format table view.
 
-Please click [Power_Pivot_by_Data_Model.xlsx](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/Excel/Power%20Pivot%20by%20Data%20Model/Power_Pivot_by_Data_Model.xlsx) and press 'View raw' for download excel file
+Please click [Orders-for-Macro-Demo.xlsx](https://github.com/tamakuku/data-science-bootcamp9/blob/79c35d5e13b5ac15c93048c5eaadb1b0a15bf303/Portfolio-Project/Excel/Macro%20Excel/Orders-for-Macro-Demo.xlsx) and press 'View raw' for download excel file
