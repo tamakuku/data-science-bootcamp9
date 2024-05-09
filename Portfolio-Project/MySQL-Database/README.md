@@ -7,7 +7,7 @@ This project come from practice made by Zinglecode.
 
 youtube https://www.youtube.com/@Zinglecode/
 
-Thanks for the knowledge for practice.
+Thanks for the knowledge and practice.
 
 ## 01 Objective
 - Basic knowledge to create database, create table, insert data into table, ER Diagram concept with PK, FK
