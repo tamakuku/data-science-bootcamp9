@@ -1,7 +1,7 @@
 
 ## Project File [_Click Notion Link_](https://www.notion.so/suphakit-panthu/MySQL-Excel-ETL-Sync-Data-with-SQL-Python-code-19b06fede8704189b71902406e413509?pvs=4)
 
-# MySQL-Excel ETL Sync Data with SQL & Python code
+# MySQL-Excel-ETL-Sync-Data-with-SQL-&-Python-code
 
 This project come from practice made by Zinglecode.
 
