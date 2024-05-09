@@ -4,7 +4,11 @@ Hi, everyone.
 
 My name is Suphakit Panthu (Top).
 
-I'm always upskill with passion would like to change career path from ecommerce into data.
+I'm taking a break from my e-commerce work career, which provides an opportunity to learn new skills like data science and AI through bootcamps, online courses, and certification exams. Building a portfolio of data projects can open up new career opportunities in the data field.
+
+During this break, I'm very enjoying learning data science by working on practical projects to understand its real-world applications. Each certification I earn showcases my expertise and commitment to learning. Enjoy the freedom to explore different datasets, analytics, and machine learning while working on data projects, as each completed project demonstrates my learning and adaptability to the data world.
+
+This break is a chance to transform my career by combining my e-commerce experience with new data skills, bringing me closer to exciting data-related job opportunities.
 
 you guys can see my portfolio in [_Portfolio-Project Folder_](https://github.com/tamakuku/data-science-bootcamp9/tree/6797cf5115cc532edc6a2ea44a6c564b60cdef64/Portfolio-Project).
 
