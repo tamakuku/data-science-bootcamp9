@@ -10,7 +10,7 @@ youtube https://www.youtube.com/@Zinglecode/
 Thanks for the knowledge for practice.
 
 ## 01 Objective
-- The project aims to synchronize category data between a MySQL database and an Excel file using Python
+- This project aims to synchronize category data between a MySQL database and an Excel file using Python
 - implementing an Extract, Transform, Load (ETL) process.
 
 ## 02 Data Sources
