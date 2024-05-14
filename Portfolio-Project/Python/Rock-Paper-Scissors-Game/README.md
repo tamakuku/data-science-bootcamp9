@@ -10,7 +10,7 @@ website https://data-science-bootcamp1.teachable.com/
 Thanks for the practice.
 
 ## Objective:
-To develop a console-based Rock-Paper-Scissors game in Python, allowing a player to compete against the computer.
+- To develop a console-based Rock-Paper-Scissors game in Python, allowing a player to compete against the computer.
 
 ### Features:
 01 Player and computer can choose rock, paper, or scissors.
