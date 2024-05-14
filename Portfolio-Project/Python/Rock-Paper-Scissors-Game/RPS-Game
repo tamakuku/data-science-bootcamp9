@@ -1,0 +1,65 @@
+
+# link >>> https://colab.research.google.com/drive/1sYHTe8zRNCESqq8ReOJXEiXB3t4e5y-W?usp=sharing
+
+## Def RPS game function
+## ask Input user name, print game rule
+## each turn will get 1 Score for winner
+## print summary score when Stop play
+
+def game():
+    import random  # Import the random module for random choice generation
+
+    ## Initialize score values
+    player_score = 0
+    com_score = 0
+
+    ## Define possible choices for RPS
+    hands = ("rock", "sisscors", "paper")
+
+    ## Welcome step
+    print("Hi!, welcome into the RPS game bro~")
+    username = input("What is your name? ")  # Ask for player's name
+    print(f"Ok {username}, please read game rules below first.")
+
+    ## Display game rules
+    print("***RPS game rules***")
+    print("1) Choose which one for your turn.")
+    print("2) Then let me choose too.")
+    print("3) For each turn, who wins gets 1 score.")
+    print("4) Type 'stop' if you want to end the game and see the summary score.")
+
+    while True:
+        ## Player's turn to choose
+        player_turn = input("Please choose rock, sisscors, paper or stop ")
+
+        ## Check if the player wants to stop the game
+        if player_turn == "stop":
+            print("Ok stop game!, this is our score")
+            print(f"your_score = {player_score}")
+            print(f"my_score = {com_score}")
+            break
+
+        ## Computer's turn to choose randomly
+        com_turn = random.choice(hands)
+        print(f"You choose {player_turn}")
+        print(f"I choose {com_turn}")
+
+        ## Determine the outcome of the round
+        if player_turn == com_turn:
+            print("Oh we draw this turn.")
+        elif (player_turn == "rock" and com_turn == "sisscors") or \
+             (player_turn == "sisscors" and com_turn == "paper") or \
+             (player_turn == "paper" and com_turn == "rock"):
+            print("You win this turn, got 1 score")
+            player_score += 1  # Increment player's score
+        else:
+            print("You lose this turn, I got 1 score.")
+            com_score += 1  # Increment computer's score
+
+    ## Display final scores and game outcome
+    if player_score == com_score:
+        print("Oh!, we draw this game, type game() if you want to play again")
+    elif player_score > com_score:
+        print("Nice!, you win this game, type game() if you want to play again")
+    else:
+        print("Hahaha, you lose this game, type game() if you want to play again")
