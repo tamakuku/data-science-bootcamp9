@@ -1,5 +1,5 @@
 
-# Rock-Paper-Scissors Game [R]
+# Rock-Paper-Scissors Game [Python]
 
 Project File [_click Google Colab_](https://colab.research.google.com/drive/1sYHTe8zRNCESqq8ReOJXEiXB3t4e5y-W?usp=sharing)
 
