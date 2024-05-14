@@ -27,7 +27,7 @@ Thanks for the practice.
 
 ### Model Type:
 - Generalized Linear Model (GLM)
-- 
+
 ### Dataset:
 - 5000 samples
 - 4 predictors: totaldayminutes, totaldaycalls, totaldaycharge, numbercustomerservicecalls
