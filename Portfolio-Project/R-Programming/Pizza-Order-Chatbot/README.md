@@ -27,3 +27,7 @@ Thanks for the practice.
 - Order Processing: Allows the customer to choose pizza options by entering the menu numbers.
 - Billing Summary: Calculates the total bill based on the customer's selection and provides a summary for payment.
 - Error Handling: Handles invalid inputs and prompts the customer to choose again.
+
+### Project Outcome:
+- The pizza order chatbot effectively guides customers through the pizza selection process and provides a convenient way to place orders.
+- Customers can easily choose their desired pizza options and receive a summary of their order for payment.
