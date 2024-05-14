@@ -14,7 +14,7 @@ Thanks for the practice.
 ## This project will got practice 4 process as below
 
 ### 01 Create 6 table
-'''
+```
 CREATE TABLE Customers (
   customer_id INT PRIMARY KEY,
   customer_name VARCHAR(50),
@@ -56,8 +56,7 @@ CREATE TABLE Expired_Products (
   product_name VARCHAR(50),
   expiration_date DATE
 );
-
-'''
+```
 
 ### 02 Insert data into tables
 - customer_id, customer_name, city, order_count >>> Customers
