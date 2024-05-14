@@ -14,9 +14,13 @@ To develop a console-based Rock-Paper-Scissors game in Python, allowing a player
 
 ### Features:
 01 Player and computer can choose rock, paper, or scissors.
+
 02 Game continues until the player types "stop".
+
 03 Score is kept for both the player and the computer.
+
 04 Game rules are displayed at the start.
+
 05 Summary of scores and result is shown at the end.
 
 ### Components:
