@@ -55,7 +55,7 @@ pizza <- function() {
 
     else if (customer_choose == "3") {
       print("ok, slamander pizza 900 THB one box")
-      bills <- bills + 800
+      bills <- bills + 900
       print("Would you like some anything else?")
     }
 
@@ -71,4 +71,3 @@ pizza <- function() {
   }
 
 }
-
