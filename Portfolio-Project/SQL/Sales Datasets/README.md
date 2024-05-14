@@ -1,62 +1,19 @@
 
+# Project Summary: ETL Sales Dataset and SQL Queries
+
 Test Run Code [_Click Replit_](https://replit.com/@spanthu/SalesDatasets)
 
 see ER-Diagram [_Click DB diagram_](https://dbdiagram.io/d/Sales-Datasets-6610bae103593b6b615275da)
 
-Sales-Datasets-with-SQL
-
 This project come from practice made by Datayolk.
-
 website https://datayolk.net/
-
 Thanks for the practice.
 
-## This project will got practice 4 process as below
+## Project Overview
+This project involves creating a database for a sales dataset, inserting data into it, and running SQL queries to extract and analyze information. The project aims to enhance skills in ETL (Extract, Transform, Load) processes and SQL querying.
 
 ### 01 Create 6 table
-```
-CREATE TABLE Customers (
-  customer_id INT PRIMARY KEY,
-  customer_name VARCHAR(50),
-  city VARCHAR(50),
-  order_count INTEGER
-);
-
-CREATE TABLE Orders (
-  order_id INT PRIMARY KEY,
-  order_date DATE,
-  customer_id INT,
-  FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
-);
-
-CREATE TABLE Payments (
-  payment_id INT PRIMARY KEY,
-  payment_method VARCHAR(50),
-  amount INTEGER,
-  order_id INT,
-  FOREIGN KEY (order_id) REFERENCES Orders(order_id)
-);
-
-CREATE TABLE Order_Details (
-  order_id INT,
-  product_id INT,
-  quantity INTEGER,
-  FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-  FOREIGN KEY (product_id) REFERENCES Products(product_id)
-);
-
-CREATE TABLE Products (
-  product_id INT PRIMARY KEY,
-  product_name VARCHAR(50),
-  unit_price FLOAT
-);
-
-CREATE TABLE Expired_Products (
-  product_id INT PRIMARY KEY,
-  product_name VARCHAR(50),
-  expiration_date DATE
-);
-```
+- Customers, Orders, Payments, Order_Details, Products, Expired_Produccts
 
 ### 02 Insert data into tables
 - customer_id, customer_name, city, order_count >>> Customers
