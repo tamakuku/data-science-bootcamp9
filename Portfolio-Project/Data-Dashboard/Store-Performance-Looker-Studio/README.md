@@ -1,5 +1,5 @@
 
-# Store Performance Dashboard Summary
+# Store-Performance-Dashboard-Summary
 
 Dashboard [_click Link_](https://lookerstudio.google.com/reporting/2413368a-fbce-4ff1-8049-a4af1571c935)
 
