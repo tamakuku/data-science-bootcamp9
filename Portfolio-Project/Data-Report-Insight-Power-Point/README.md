@@ -1,7 +1,7 @@
 
 # Lazada-Shop-Campaign-12.12-Sales-Report-Summary
 
-Report file [_Download_](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/Data-Report-Insight-Power-Point/Lazada%2012.12%20Performance%20Report.pdf)
+Report file [_Click_](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/Data-Report-Insight-Power-Point/Lazada%2012.12%20Performance%20Report.pdf)
 
 This project come from my previously work as Store Manager in Data Report path.
 
