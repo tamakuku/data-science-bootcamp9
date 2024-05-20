@@ -18,48 +18,48 @@ Thanks for the practice.
 - To store the extracted data in a structured format within a CSV file for further analysis or reporting.
 
 ## Features:
-### API Request and Data Extraction:
+### 01 API Request and Data Extraction:
 - Purpose: To fetch data from SWAPI endpoints and extract relevant character information.
 Columns Extracted: name, height, mass, gender, homeworld.
 - Methodology: Iterative API calls to gather data for characters with IDs from 1 to 5.
 
-### Data Processing:
+### 02 Data Processing:
 - Homeworld Extraction: Additional API call to fetch and extract the name of the homeworld for each character.
 - Data Structuring: Collected data is organized into a dictionary format for each character.
 
-### Data Storage:
+### 03 Data Storage:
 - Purpose: To save the processed data in a CSV file.
 - Output: A CSV file named 5_star_wars_people.csv containing the extracted character information.
 
 ## Components:
-### API Interaction:
+### 01 API Interaction:
 - Initial Test: Verification of API accessibility and response handling.
 - Loop for Data Collection: A loop to automate API requests for the first five character IDs.
 
-### Data Extraction:
+### 02 Data Extraction:
 - JSON Parsing: Extraction of required fields from the JSON response.
 - Homeworld Data Fetch: Additional API request to retrieve homeworld information based on the URL provided in the character data.
 
-### Data Storage and Output:
+### 03 Data Storage and Output:
 - DataFrame Construction: Utilizing Pandas to structure the collected data.
 - CSV Generation: Writing the structured data into a CSV file for easy access and analysis.
 
 ## Detailed Steps:
-### Initial Setup:
+### 01 Initial Setup:
 - Import necessary modules: requests for API calls and pandas for data manipulation.
 - Define the base URL for SWAPI requests.
 
-### API Request Loop:
+### 02 API Request Loop:
 - Iterate over character IDs from 1 to 5.
 - For each ID, request data from the SWAPI endpoint.
 - Extract name, height, mass, gender, and homeworld URL from the response.
 - Make a secondary request to fetch the homeworld name.
 
-### Data Compilation:
+### 03 Data Compilation:
 - Store extracted data in a dictionary.
 - Append each character's dictionary to a list.
 
-### Data Output:
+### 04 Data Output:
 - Convert the list of dictionaries into a Pandas DataFrame.
 - Write the DataFrame to a CSV file named 5_star_wars_people.csv.
 
