@@ -1,183 +1,105 @@
 
 # Link >>> https://datalore.jetbrains.com/notebook/UoqJjTJGNYJGKQOqNWFVTD/Dh7w6XZbTvIPymvWFRrOBf
 
-### preview and clean data from csv file
-### analysis data
+### Import and clean data from CSV file
+### Perform data analysis and visualization
 
-##  import data
+# Import necessary libraries
 import pandas as pd
-df = pd.read_csv("sample-store.csv")
-
-
-### Preview & Clean data part
-
-## preview top 5 rows
-df.head()
-
-## preview overview information of dataframe
-df.info()
-
-
-## TODO - convert order date and ship date to datetime in the original dataframe
-# convert Order Date
-df['Order Date'] = pd.to_datetime( df['Order Date'], format = '%m/%d/%Y')
-
-# convert Ship Date
-df['Ship Date'] = pd.to_datetime( df['Ship Date'], format = '%m/%d/%Y')
-
-# view by select 2 column
-df[ ['Order Date', 'Ship Date'] ]
-
-
-## TODO - count nan in postal code column
-df['Postal Code'].isna().sum()
-
-
-## TODO - filter rows with missing values
-df[ df.isna() ]
-
-
-## TODO - How many count each Ship Mode in dataframe ?
-df['Ship Mode'] .value_counts()
-
-
-### Analysis part
-
-## TODO 01 - how many columns, rows in this dataset
-df.shape
-
-
-## TODO 02 - is there any missing values?, if there is, which colunm? how many nan values?
-df.isna().sum()
-
-
-## TODO 03 - your friend ask for `California` data, filter it and export csv for him
-df.head()
-
-# Filter State == California
-df_california = df[ df['State'] == 'California'] 
-
-# Export to csv file
-df_california.to_csv( 'df_california.csv')
-
-
-## TODO 04 - your friend ask for all order data in `California` and `Texas` in 2017 (look at Order Date), send him csv file
-
-# Filter State == California and Texas >>> return into new value
-df_Cal_Tex = df[ df['State'].isin( ['California', 'Texas'] ) ]
-
-# then Filter that value by Order Date == 2017 >>> return into value
-df_2017 = df_Cal_Tex[ df_Cal_Tex['Order Date'] .dt.year == 2017 ]
-
-# Export to csv file
-df_2017.to_csv('df_2017.csv')
-
-
-## TODO 05 - how much total sales, average sales, and standard deviation of sales your company make in 2017
-
-# Filter Order Date == 2017 >>> return into new value
-df_2017 = df[ df['Order Date'].dt.year == 2017 ]
-
-# select Sales column + find Aggregate mean >>> return into value
-df_agg_2017 = df_2017['Sales'] .agg( ['mean', 'std'] )
-
-# view result
-df_agg_2017
-
-
-## TODO 06 - which Segment has the highest profit in 2018
-
-# Filter Order Date == 2018 >>> return into new value
-df_2018 = df[ df['Order Date'].dt.year == 2018 ]
-
-# Filter max value in Profit column >>> return into new value
-df_2018_maxProfit = df_2018 .loc[ df_2018['Profit'].idxmax() ]
-
-# select Segment and Profit column for result
-df_2018_maxProfit[ ['Segment', 'Profit'] ]
-
-
-## TODO 07 - which top 5 States have the least total sales between 15 April 2019 - 31 December 2019
-
-# Filter Order Date between 2019-04-15 to 2019-12-31
-df_2019 = df[ (df['Order Date'] >= '2019-04-15') & (df['Order Date'] <= '2019-12-31') ] 
-
-# show sum Sales Group by States and Sort by Sales ascending = False
-df_2019_sumSales = df_2019.groupby('State')['Sales'] \
-                          .sum() \
-                          .sort_values(ascending = False)
-
-# preview 5 rows
-df_2019_sumSales.head()
-
-
-## TODO 08 - what is the proportion of total sales (%) in West + Central in 2019 e.g. 25% 
-
-## filter Order Date == 2019
-df_orderDate_2019 = df[ df['Order Date'].dt.year == 2019 ]
-
-## sum total Sales each Region
-df_totalSales_Region = df_orderDate_2019 \
-                        .groupby('Region')['Sales'] \
-                        .sum()
-
-## find proportion = total sales each region / total sales of region
-df_proportion = df_totalSales_Region / df_totalSales_Region .sum()
-
-# create List for Filter Region == West & Central
-filter_Region = ["West", "Central"]
-
-# filter Region from List value
-df_proportion_filterRegion = df_proportion[ filter_Region ]
-
-# view result
-df_proportion_filterRegion
-
-
-## TODO 09 - find top 10 popular products in terms of number of orders vs. total sales during 2019-2020
-
-# filter Order Date 2019 to 2020
-df_2019_2020 = df[ (df['Order Date'].dt.year >= 2019) & (df['Order Date'].dt.year <= 2020) ]
-
-# find Count Order Date and total Sales >>> each Products
-df_group_product = df_2019_2020.groupby('Product Name') \
-                               .agg( Count_Order =('Order Date', 'count'), Total_Sales =('Sales', 'sum') ) 
-
-# Sort 2 column by Count_Order and Total_Sales, ascending = False
-df_group_product = df_group_product.sort_values( by = ['Count_Order', 'Total_Sales'], ascending= False ) \
-                                   .head(10)
-
-df_group_product
-
-
-### TODO 10 - plot at least 2 plots, show sales performance each regions by sales and quantity.
-
-## plot Bar chart >>> Sales performance by Region in 2019
 import matplotlib.pyplot as plt
 
-Region = df_2019["Region"] # filter for X-axis
-Sales = df_2019["Sales"] # filter for y-axis
+# Load data from CSV file into a DataFrame
+df = pd.read_csv("sample-store.csv")
 
-plt.figure( figsize=(10, 5) )
+### Preview & Clean Data
+
+# Display the first 5 rows of the DataFrame
+df.head()
+
+# Get an overview of the DataFrame, including column names and data types
+df.info()
+
+# Convert 'Order Date' and 'Ship Date' columns to datetime format
+df['Order Date'] = pd.to_datetime(df['Order Date'], format='%m/%d/%Y')
+df['Ship Date'] = pd.to_datetime(df['Ship Date'], format='%m/%d/%Y')
+
+# Display the 'Order Date' and 'Ship Date' columns to verify conversion
+df[['Order Date', 'Ship Date']]
+
+# Count the number of missing values in the 'Postal Code' column
+df['Postal Code'].isna().sum()
+
+# Filter rows with any missing values
+df[df.isna().any(axis=1)]
+
+# Count the occurrences of each Ship Mode
+df['Ship Mode'].value_counts()
+
+### Data Analysis
+
+# TODO 01 - Find out the number of rows and columns in the dataset
+df.shape
+
+# TODO 02 - Check for missing values in each column and count them
+df.isna().sum()
+
+# TODO 03 - Filter data for California and export it to a new CSV file
+df_california = df[df['State'] == 'California']
+df_california.to_csv('df_california.csv', index=False)
+
+# TODO 04 - Filter data for California and Texas in 2017 and export to a new CSV file
+df_Cal_Tex = df[df['State'].isin(['California', 'Texas'])]
+df_2017 = df_Cal_Tex[df_Cal_Tex['Order Date'].dt.year == 2017]
+df_2017.to_csv('df_2017.csv', index=False)
+
+# TODO 05 - Calculate total, average, and standard deviation of sales in 2017
+df_2017 = df[df['Order Date'].dt.year == 2017]
+df_agg_2017 = df_2017['Sales'].agg(['sum', 'mean', 'std'])
+df_agg_2017
+
+# TODO 06 - Identify the segment with the highest profit in 2018
+df_2018 = df[df['Order Date'].dt.year == 2018]
+df_2018_maxProfit = df_2018.loc[df_2018['Profit'].idxmax()]
+df_2018_maxProfit[['Segment', 'Profit']]
+
+# TODO 07 - Find the top 5 states with the least total sales between April 15, 2019, and December 31, 2019
+df_2019 = df[(df['Order Date'] >= '2019-04-15') & (df['Order Date'] <= '2019-12-31')]
+df_2019_sumSales = df_2019.groupby('State')['Sales'].sum().sort_values(ascending=True).head(5)
+df_2019_sumSales
+
+# TODO 08 - Calculate the proportion of total sales in the West and Central regions in 2019
+df_orderDate_2019 = df[df['Order Date'].dt.year == 2019]
+df_totalSales_Region = df_orderDate_2019.groupby('Region')['Sales'].sum()
+df_proportion = df_totalSales_Region / df_totalSales_Region.sum()
+filter_Region = ["West", "Central"]
+df_proportion_filterRegion = df_proportion[filter_Region]
+df_proportion_filterRegion
+
+# TODO 09 - Find the top 10 popular products based on the number of orders and total sales during 2019-2020
+df_2019_2020 = df[(df['Order Date'].dt.year >= 2019) & (df['Order Date'].dt.year <= 2020)]
+df_group_product = df_2019_2020.groupby('Product Name').agg(Count_Order=('Order Date', 'count'), Total_Sales=('Sales', 'sum'))
+df_group_product = df_group_product.sort_values(by=['Count_Order', 'Total_Sales'], ascending=False).head(10)
+df_group_product
+
+### Visualization
+
+# Plot sales performance by region in 2019 using a bar chart
+Region = df_2019["Region"]
+Sales = df_2019["Sales"]
+plt.figure(figsize=(10, 5))
 plt.subplot(1, 2, 1)
-plt.bar( Region, Sales, color= "gold" )
+plt.bar(Region, Sales, color="gold")
 plt.title("Sales Performance by Region in 2019")
 plt.xlabel("Region")
 plt.ylabel("Sales")
 plt.xticks(rotation=45)
 
-
-## plot scatter plot >>> compare category performance by Sales, Profit in 2019
-import matplotlib.pyplot as plt
-
-# Select columns for x and y axes
+# Plot a scatter plot to compare sales and profit in 2019
 x_column = "Sales"
 y_column = "Profit"
-
-# Create scatter plot
-plt.figure( figsize=(8, 6) )
-plt.scatter( df_2019[x_column], df_2019[y_column], alpha=0.5, color = "red" )
-plt.title( f"Scatter Plot of {y_column} vs {x_column} in 2019" )
+plt.figure(figsize=(8, 6))
+plt.scatter(df_2019[x_column], df_2019[y_column], alpha=0.5, color="red")
+plt.title(f"Scatter Plot of {y_column} vs {x_column} in 2019")
 plt.xlabel(x_column)
 plt.ylabel(y_column)
 plt.grid(True)
