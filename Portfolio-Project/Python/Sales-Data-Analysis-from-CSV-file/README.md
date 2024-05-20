@@ -49,7 +49,7 @@ Thanks for the practice.
 ### Filter and Export Data:
 - Extract data for orders from California and save to a new CSV file.
 - Extract data for orders from California and Texas in 2017 and save to a new CSV file.
-- 
+
 ### Sales Analysis for 2017:
 - Calculate total, average, and standard deviation of sales in 2017.
 
