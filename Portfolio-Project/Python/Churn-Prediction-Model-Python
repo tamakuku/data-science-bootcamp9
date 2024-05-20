@@ -1,55 +1,48 @@
 
 Link >>> https://colab.research.google.com/drive/1K4eVfD0NLN0B33awu1BsOB3eDYwlxe0T?usp=sharing
 
-### build Logistic Regression Model
-## by 4 Step ML work flow
-## with churn dataframe
+### Build Logistic Regression Model
+## Using a 4-Step ML Workflow
+## With churn DataFrame
 
+# Import necessary libraries
+from sklearn.linear_model import LogisticRegression  # Logistic Regression model
+from sklearn.model_selection import train_test_split  # Split data into train and test sets
+from sklearn.metrics import accuracy_score  # Evaluate model accuracy
+import pandas as pd  # Manage DataFrame
+from google.colab import drive  # Read file from Google Drive
 
-## import module
-from sklearn.linear_model import LogisticRegression # model
-from sklearn.model_selection import train_test_split # split data
-
-from google.colab import drive # read file from google drive
-
-## Connect to Google Drive
+# Connect to Google Drive
 drive.mount('/content/drive')
 
-import pandas as pd # manage dataframe
+# Read CSV file from Google Drive
+df = pd.read_csv("/content/drive/MyDrive/Data Rockie School/Bootcamp 9/Raw Data/churn.csv")
 
-## Read CSV file from google drive
-df = pd.read_csv("/content/drive/MyDrive/Bootcamp 9/Raw Data/churn.csv")
-
-## preview dataframe
+# Preview the DataFrame
 df.head()
 
+# Select features (X) and target (y)
+X = df[["totaldayminutes", "totaldaycalls", "totaldaycharge", "numbercustomerservicecalls"]]
+y = df["churn"]
 
-## select X, y variables
-X = churn[["totaldayminutes", "totaldaycalls", "totaldaycharge", "numbercustomerservicecalls"]]
-y = churn["churn"]
-
-
-## Step 01 split data
+# Step 01: Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.20, random_state=42
 )
 
+# Step 02: Train the model
+model = LogisticRegression()  # Initialize Logistic Regression model
+model.fit(X_train, y_train)  # Fit the model with training data
 
-## Step 02 train model
-model = LogisticRegression() ## choose model
-model.fit(X_train, y_train) ## model fitting
+# Step 03: Make predictions
+train_pred = model.predict(X_train)  # Predict on training data
+test_pred = model.predict(X_test)  # Predict on test data
 
+# Step 04: Evaluate the model
+train_accuracy = accuracy_score(y_train, train_pred)  # Training accuracy
+test_accuracy = accuracy_score(y_test, test_pred)  # Testing accuracy
 
-## Step 03 score
-train_pred = model.predict(X_train)
-test_pred = model.predict(X_test)
-
-
-## Step 04 evaluate
-train_accuracy = accuracy_score(y_train, train_pred)
-test_accuracy = accuracy_score(y_test, test_pred)
-
-
-## print error metric
+# Print the accuracy metrics
 print("Train Accuracy:", train_accuracy)
 print("Test Accuracy:", test_accuracy)
+
