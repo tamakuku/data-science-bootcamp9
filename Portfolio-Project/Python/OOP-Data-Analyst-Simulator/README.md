@@ -13,11 +13,15 @@ Thanks for the practice.
 - To simulate a data analyst management system using Object-Oriented Programming (OOP) concepts in Python.
 
 ## Features:
-### 01 Data Analyst Attribute Display: Displays the attributes of the data analyst, such as name, age, skill, and salary.
-### 02 Learning Status: Displays a message indicating the data analyst is upskilling.
-### 03 Job Search: Displays a message indicating the data analyst is looking for a new job.
-### 04 Salary Increment: Increases the salary of the data analyst by a specified amount.
-### 05 Salary Update: Displays the updated salary after the data analyst gets a new job.
+01 Data Analyst Attribute Display: Displays the attributes of the data analyst, such as name, age, skill, and salary.
+
+02 Learning Status: Displays a message indicating the data analyst is upskilling.
+
+03 Job Search: Displays a message indicating the data analyst is looking for a new job.
+
+04 Salary Increment: Increases the salary of the data analyst by a specified amount.
+
+05 Salary Update: Displays the updated salary after the data analyst gets a new job.
 
 ## Components:
 - DA Class: Defines the Data Analyst (DA) class with attributes such as name, age, skill, and salary.
