@@ -1,7 +1,7 @@
 
 # R-PostgreSQL-DataFrame-Creation-and-Upload
 
-Project Code [_click file_](https://github.com/tamakuku/data-science-bootcamp9/blob/a2fbfb4d156e127b4ddce8e11c77a0a42981b12f/Portfolio-Project/R-Programming/Churn%20Prediction%20Model%20Logistic%20Regression/Churn%20Prediction%20Model%20Logistic%20Regression)
+Project Code [_click file_](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/R-Data-Transformation/R-PostgreSQL-DataFrame-Creation-and-Upload/Connection-RPostgreSQL.R)
 
 This project come from practice made by Data Rockie School.
 
