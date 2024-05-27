@@ -5,8 +5,6 @@ install.packages("tidyverse")
 library(RPostgreSQL)
 library(tidyverse)
 
-### write data from Homework SQL (pizza shop) into PostgreSQL sever
-### send answers code by Notion too
 
 ## 1. use dbConnect( ) to create connection to PostgreSQL sever and return into value.
 con_tama_sever <- dbConnect(
