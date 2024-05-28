@@ -1,7 +1,7 @@
 
 # Analyzing-Flight-Data-Using-R
 
-Project Code [_click file_](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/R-Data-Transformation/R-PostgreSQL-DataFrame-Creation-and-Upload/Connection-RPostgreSQL.R)
+Project Code [_click file_](https://github.com/tamakuku/data-science-bootcamp9/blob/main/Portfolio-Project/R-Data-Transformation/Analyzing-Flight-Data-Using-R/Analyzing-Flight-Data.R)
 
 This project come from practice made by Data Rockie School.
 
