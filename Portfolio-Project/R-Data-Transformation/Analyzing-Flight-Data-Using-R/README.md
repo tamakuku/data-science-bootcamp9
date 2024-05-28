@@ -35,4 +35,3 @@ Thanks for the practice.
 3. Month with Longest Distance Flights
 4. Flights Departing at Noon in March
 5. Flights with Tail Number Starting with "N8" from UA
-
