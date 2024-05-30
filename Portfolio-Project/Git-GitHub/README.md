@@ -190,5 +190,3 @@ By following this guide, users will achieve:
 - **Add Local Repository**: Go to File > Add Local repository, select the project folder.
 - **Commit and Push Changes**: Track changes, commit, and push to GitHub via the desktop app.
 - **Clone Repository**: Use GitHub Desktop to clone repositories to your local machine.
-
-This guide ensures that users have a detailed understanding and practical experience of using Git, GitHub, GitHub Desktop, and VS Code for version control and project management.
