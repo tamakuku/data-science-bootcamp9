@@ -8,20 +8,24 @@
 
 game <- function() {
   
-  ## return score value
+  ## initialize scores
   player_score <- 0
   com_score <- 0
   
-  ## return RPS value
+  ## define possible moves
   hands <- c( "hammer", "sisscors", "paper" )
   
-  ## welcome step
+
+  ## welcome message
   print ( "Yo bro!, welcome into RPS game" )
   flush.console()
   
-  print ( paste ( "Ok", readline( "What is your name?: " ), "lets play game." ) )
+  ## prompt for user name and greet the user
+  user_name <- readline("What is your name?: ")
+  print( paste( "Hello", user_name, "let's play the game."))
   flush.console()
   
+  ## print game rules
   print ( "***please read the game rules below.***" )
   print ( "1) choose which one for your turn." )
   print ( "2) then let me choose too." )
@@ -29,6 +33,8 @@ game <- function() {
   print ( "4) type stop if want to end game and see summary score" )
   flush.console()
   
+
+  ## game loop
   while ( TRUE ) {
     
     ## player turn choose
@@ -48,6 +54,7 @@ game <- function() {
     print ( paste ( "I'm choose", com_hand ) )
     flush.console()
     
+    
     ## draw condition
     if ( player_hand == com_hand )
     { print ( "Oh We drawed this turn." ) }
@@ -65,6 +72,7 @@ game <- function() {
     flush.console()
   }
   
+
   ## end_score print conditions
   if ( player_score == com_score )
   { print ( "Oh! we draw this game, type game() for play again") }

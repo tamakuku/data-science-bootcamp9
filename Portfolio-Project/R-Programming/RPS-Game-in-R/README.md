@@ -1,7 +1,7 @@
 
-# Pizza-Order-Chatbot [R]
+# RPS-Game-in-R
 
-Project File [_click Google Colab_](https://colab.research.google.com/drive/1uDgQEttuz78cvsSq8D-_0ZxlHmzE2IgJ?usp=sharing)
+Project Code [_click Google Colab_](https://colab.research.google.com/drive/1LSXjII2WVPlVhZJ1jBXRmAZy1GGHsbsH?usp=sharing)
 
 This project come from practice made by Data Rockie School.
 
@@ -9,25 +9,28 @@ website https://data-science-bootcamp1.teachable.com/
 
 Thanks for the practice.
 
-## Objective:
-- To build a simple chatbot in R for receiving pizza orders from customers in a pizza shop.
+## Overview
+- This project showcases an implementation of the classic Rock-Paper-Scissors (RPS) game using R programming. The code is designed to interact with users, taking their input, and simulating a game against a computer opponent. The game keeps track of the scores and provides a summary at the end of the session. This project demonstrates proficiency in basic R programming, user input handling, and conditional logic.
 
-### Features:
-01 Welcomes customers and displays the menu with prices.
+## Key Features
+1. User Interaction:
+- The game begins with a welcome message and instructions.
+- The user is prompted to enter their name, which personalizes the game experience.
 
-02 Allows customers to choose pizza options by entering the corresponding numbers.
+2. Gameplay Mechanics:
+- The game continues in a loop, allowing users to play multiple rounds.
+- Users can choose between "hammer", "scissors", or "paper" for their turn.
+- The computer randomly selects its move.
 
-03 Calculates the total bill based on the customer's selection.
+3. Scoring System:
+- Each win earns the user or the computer one point.
+- The game continues until the user types "stop", at which point the scores are summarized and displayed.
 
-04 Provides a billing summary for payment.
+4. Game Rules:
+- Detailed rules are provided at the start of the game to ensure clarity.
 
-### Components:
-- Welcome Message: Greets the customer and introduces the pizza shop.
-- Menu Display: Shows the available pizzas with their respective numbers and prices.
-- Order Processing: Allows the customer to choose pizza options by entering the menu numbers.
-- Billing Summary: Calculates the total bill based on the customer's selection and provides a summary for payment.
-- Error Handling: Handles invalid inputs and prompts the customer to choose again.
+5. End of Game Summary:
+- The game announces the final scores and the overall winner.
 
-### Project Outcome:
-- The pizza order chatbot effectively guides customers through the pizza selection process and provides a convenient way to place orders.
-- Customers can easily choose their desired pizza options and receive a summary of their order for payment.
+## Project Outcome:
+- This Rock-Paper-Scissors game implementation provides an interactive and engaging way to demonstrate fundamental R programming skills. The project is an excellent example of how to handle user inputs, apply conditional logic, and manage a simple game loop in R. This addition to your portfolio will showcase your ability to create user-centric applications and provide a solid foundation for more complex projects.
