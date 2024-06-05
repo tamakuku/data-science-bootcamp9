@@ -1,40 +1,40 @@
 
-Test Run Code [_Click Replit_](https://replit.com/@spanthu/PizzaShopDatabase)
+## Project File [_Click Google Sheets_](https://docs.google.com/spreadsheets/d/1NFU3mjpCw4_WSIZ_LB3ApUeL7Yf63T4XtRNYwyDLN-4/edit?usp=sharing)
 
-see ER-Diagram [_Click DB diagram_](https://dbdiagram.io/d/Pizza-Shop-Database-ER-Diagram-65ed39aeb1f3d4062c89a872)
+# Facebook-Content-Analysis [Google_Sheets]
 
-Pizza-Shop-Database-with-SQL
-
-This project come from practice made by Data Rockie School.
+This project is to apply basic statistics analysis that I've learned from Data Rockie School.
 
 website https://data-science-bootcamp1.teachable.com/
 
-Thanks for the practice.
+Thanks for the knowledge.
 
-## This project will got practice 4 process as below
+## Overview
+- This project analyzes Facebook content to identify key trends and insights. The analysis is divided into two main parts:
 
-### 01 Create 4 Table
-- shops
-- customers
-- menu
-- orders
+1. DATA_FB Sheet: Contains raw data collected from Facebook.
+2. Correlation & Regression Sheet: Provides insights through correlation and regression analysis, including visualizations.
 
-### 02 Insert data into tables
-- shop_id, shop_location >>> shops
-- customer_id, customer_name, customer_country >>> customers
-- menu_id, menu_name, menu_price >>> menu
-- order_id, order_date, customer_id, shop_id, menu_id >>> orders
+## Data Collection
+### The raw data includes metrics such as:
+- Name (Profile), Created Date, Time Post, Type Message, Link
+- 👍Likes, 😆Laugh, 💖Love, 😲Wow, 😡Angry, 😘Care, 💬Comment, 📲Share
 
-### 03 use SQL syntax query data to find the answers for questions
-- Clause >>> SELECT, FROM, JOIN ON, WHEN, GROUP BY, HAVING, ORDER BY
-- Sub-queries >>> WITH clause
-- Nested Sub-queries >>> SELECT FROM ( SELECT FROM )
-- Aggregate Fucntion >>> SUM, AVG, MIN, MAX, COUNT
-- Basic Operators >>> AS, ROUND, LIKE, = > <
+## Data Transformation
+### dditional columns calculated:
+- Total Engagement: Sum of 👍Likes, 😆Laugh, 💖Love, 😲Wow, 😡Angry, 😘Care, 💬Comment, 📲Share.
+- Length Message: Length of the message content.
+- Weekday: Derived from the Created Date column.
 
-### 04 List of questions
-- How many customers have total spend over 500?
-- How many shops have the most orders?
-- Who is the customer who orders beef pizza and comes from Japan?
-- What is the shop location started with a C letter and got a pork pizza order in September?
-- Where is the shop located outside of BKK that has customers from Thailand and Japan and has an average spend of less than 500?
+## Key Insights
+### Correlation & Regression Analysis
+- Total Engagement vs. Length of Message: Identifies how the length of a post influences total engagement.
+- Total Engagement vs. Weekday or Weekend: Analyzes engagement differences between weekdays and weekends.
+- Total Engagement vs. Time of Post: Explores how posting time impacts total engagement.
+
+## Visualizations
+- Scatter plots and regression lines to illustrate relationships between engagement metrics and other factors.
+- Charts showing the distribution of engagement metrics over time and by content type.
+
+## Conclusion
+- The analysis provides actionable insights into what types of content perform best on Facebook, helping to inform future content strategies.
