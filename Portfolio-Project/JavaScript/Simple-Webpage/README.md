@@ -24,7 +24,70 @@ Thanks for the knowledge and practice.
 - Body Section: Contains the main content and references the JavaScript file.
 
 # Code Explanation
-***input code block too!
+'''
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .content {
+            margin-bottom: 20px; /* Adds space below each content block */
+            font-size: 30px; /* Increases text size */
+        }
+        .responsive-image {
+            margin-top: 20px; /* Adds space above the image */
+            margin-bottom: 20px; /* Adds space below the image */
+            width: 800px;
+            height: 450px;
+        }
+        .reference-link {
+            font-size: 16px; /* Sets the font size for the link */
+            margin-top: 10px; /* Adds space above the link */
+            display: block; /* Makes the link display as a block element */
+        }
+        .spacer {
+            height: 20px; /* Adds vertical space */
+        }
+        #press-button {
+            margin-top: 20px; /* Adds space above the button */
+            margin-bottom: 20px; /* Adds space below the button */
+            font-size: 20px; /* Increases button text size */
+            padding: 15px 30px; /* Increases button size */
+        }
+        #message {
+            margin-top: 20px; /* Adds space above the message */
+            font-size: 20px; /* Increases text size for the message */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content-1" class="content">Content 1</div>
+        <div id="content-2" class="content">Content 2</div>
+        <div id="content-3" class="content">Content 3</div>
+
+        <img src="https://pbs.twimg.com/media/E_isWKjVcAAvZxu?format=jpg&name=900x900" alt="Description of the image" class="responsive-image">
+        <a href="https://x.com/avcthailand/status/1439089629177651206/photo/1" class="reference-link" target="_blank">View Source Image</a>
+
+        <button id="press-button">กดรับวาร์ป ด่วน!!!</button>
+        <p id="message"></p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+'''
 
 - Body Styling: Centers the content vertically and horizontally.
 - Container Class: Centers text within the container.
@@ -37,7 +100,39 @@ Thanks for the knowledge and practice.
 # index.js
 ## JavaScript Functionality
 - This file contains JavaScript code that dynamically updates the HTML content and handles button click events.
-***input code block too!
+'''
+// HTML controls
+
+// Select and update content block 1
+let content1 = document.getElementById('content-1');
+let textHtml = '<b>ทามะ 789</b>';
+textHtml += ' <i>ดอทคอม!</i>';
+content1.innerHTML = textHtml;
+
+// Select and update content block 2
+let content2 = document.getElementById('content-2');
+let textHtml2 = '<b>แฟนคลับเศร้าหนักมาก เมื่อ Yura กาโน๊ะ ประกาศอำลาวงการ!</b>';
+content2.innerHTML = textHtml2;
+
+// Select and update content block 3
+let content3 = document.getElementById('content-3');
+let textHtml3 = '<v>Oh~Noooo T_T</v>';
+content3.innerHTML = textHtml3;
+
+// HTML Events
+
+// Select button and message elements
+let pressButton = document.getElementById('press-button');
+let message = document.getElementById('message');
+
+// Define function to display a message when button is clicked
+function showMessage() {
+    message.innerHTML = 'หยอกๆ ไม่มีวาร์ปให้หลอกจ้าาา~';
+}
+
+// Add event listener to button for click event
+pressButton.addEventListener('click', showMessage);
+'''
 
 ### HTML Controls:
 - Selects elements by their ID.
