@@ -24,7 +24,7 @@ Thanks for the knowledge and practice.
 - Body Section: Contains the main content and references the JavaScript file.
 
 # Code Explanation
-'''
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,7 +87,7 @@ Thanks for the knowledge and practice.
     <script src="index.js"></script>
 </body>
 </html>
-'''
+```
 
 - Body Styling: Centers the content vertically and horizontally.
 - Container Class: Centers text within the container.
@@ -100,7 +100,7 @@ Thanks for the knowledge and practice.
 # index.js
 ## JavaScript Functionality
 - This file contains JavaScript code that dynamically updates the HTML content and handles button click events.
-'''
+```
 // HTML controls
 
 // Select and update content block 1
@@ -132,7 +132,7 @@ function showMessage() {
 
 // Add event listener to button for click event
 pressButton.addEventListener('click', showMessage);
-'''
+```
 
 ### HTML Controls:
 - Selects elements by their ID.
