@@ -24,7 +24,8 @@ Thanks for the knowledge and practice.
 - Body Section: Contains the main content and references the JavaScript file.
 
 # Code Explanation
-```
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,7 +101,8 @@ Thanks for the knowledge and practice.
 # index.js
 ## JavaScript Functionality
 - This file contains JavaScript code that dynamically updates the HTML content and handles button click events.
-```
+
+```javascript
 // HTML controls
 
 // Select and update content block 1
