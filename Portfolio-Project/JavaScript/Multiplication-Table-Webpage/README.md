@@ -24,7 +24,8 @@ Thanks for the knowledge and practice.
 - Body Section: Contains the main content, including input fields, buttons, and output div.
 
 # Code Explanation
-```
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +63,8 @@ Thanks for the knowledge and practice.
 # index.js
 ## JavaScript Functionality
 - This file contains the JavaScript code that dynamically generates and displays the multiplication table based on the user's input.
-```
+
+```javascript
 // Select elements by their ID
 let numberInput = document.getElementById('number-input');
 let runButton = document.getElementById('run-button');
